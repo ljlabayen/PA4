@@ -15,7 +15,6 @@
 * deliverables including, but not limited to the source code, lab report and output 
 * files were written and produced by me alone.
 */
-package prjBank;
 
 public class Savings extends Account{
 	

@@ -15,7 +15,6 @@
 * deliverables including, but not limited to the source code, lab report and output 
 * files were written and produced by me alone.
 */
-package prjBank;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader; 
@@ -37,7 +36,7 @@ public class RunBank {
 	 */
 	public static void main(String args[]) throws IOException {
 		Scanner sc = new Scanner(System.in); 
-		String file = "./src/prjBank/CS 3331 - Bank Users 3.csv";
+		String file = "./PA4/src/CS 3331 - Bank Users 4.csv";
 		List<Customer> custList = readCSV(file);
 		//List<BankStatement> bsList = new ArrayList<BankStatement>();
 		System.out.println("Welcome to the Bank of Miners!\n");
@@ -332,7 +331,7 @@ public class RunBank {
 	 * @exception IOException throw an exception if file name is incorrect
 	 */
 	public static List<Customer> readCSV(String fileName) throws IOException {
-		FileWriter myWriter = new FileWriter("./src/prjBank/bankLog.txt",true);
+		FileWriter myWriter = new FileWriter("./PA4/src/bankLog.txt",true);
 		String file = fileName;
 		List<Customer> custList = new ArrayList<Customer>();
 		try(BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -392,7 +391,7 @@ public class RunBank {
 	 */
 	public static void toCSV(List<Customer> custList) throws IOException {
 		
-		String file = "./src/prjBank/updatedCSV.csv";
+		String file = "./PA4/src/updatedCSV.csv";
 		try {
 			FileWriter writer = new FileWriter(file);
 			writer.append("First Name,Last Name,Date of Birth,IdentificationNumber,Address,"
@@ -556,7 +555,7 @@ public class RunBank {
 			
 			if(cust == null) { System.out.println("Name not found! Going back!"); return; }
 
-			String file = "./src/prjBank/BankStatements/" + cust.getFirstName() + "_" + cust.getLastName() + "_BankStatement.txt";
+			String file = "./PA4/src/BankStatements/" + cust.getFirstName() + "_" + cust.getLastName() + "_BankStatement.txt";
 			try {
 				FileWriter writer = new FileWriter(file);
 				writer.append("Name: " + cust.getFirstName() + " " + cust.getLastName());
@@ -638,7 +637,7 @@ public class RunBank {
 		
 		
 		// fix hard code
-		try(BufferedReader br = new BufferedReader(new FileReader("./src/prjBank/Transaction Actions.csv"))) {
+		try(BufferedReader br = new BufferedReader(new FileReader("./PA4/src/Transaction Actions.csv"))) {
 			String line = "";
 			// used to skip header
 			br.readLine();

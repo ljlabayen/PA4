@@ -1,5 +1,3 @@
-package prjBank;
-
 public class BankStatement {
 	private String dateTime;
 	private String transType;
@@ -98,7 +96,7 @@ public class BankStatement {
 	}
 	/**
 	 * This method is used to set current balance
-	 * @param newNalance - new balance
+	 * @param newBalance - new balance
 	 */
 	public void setNewBalance(double newBalance) {
 		this.newBalance = newBalance;
