@@ -24,6 +24,7 @@ public abstract class Person {
     private int identNum;
     private String address;
     private String phoneNum;
+    private String email;
 
 
     /**
@@ -36,7 +37,7 @@ public abstract class Person {
      * @param phoneNum - Phone number
      */
     public Person(String firstName, String lastName, String dateOfBirth, int identNum, String address,
-                  String phoneNum) {
+                  String phoneNum, String email) {
 
         this.firstName = firstName;
         this.lastName = lastName;
@@ -44,6 +45,7 @@ public abstract class Person {
         this.identNum = identNum;
         this.address = address;
         this.phoneNum = phoneNum;
+        this.email = email;
     }
 
 
@@ -138,5 +140,18 @@ public abstract class Person {
         this.phoneNum = phoneNum;
     }
 
-
+    /**
+     * This method is used to get email
+     * @return email of person
+     */
+    public String getEmail() {
+        return email;
+    }
+    /**
+     * This method is used to set email
+     * @param email - desired email
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

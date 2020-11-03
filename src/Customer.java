@@ -24,6 +24,7 @@ public class Customer extends Person{
     private Checking checking;
     private Savings savings;
     private Credit credit;
+    private String password;
     private List<BankStatement> transList = new ArrayList<BankStatement>();
 
     /**
@@ -40,11 +41,12 @@ public class Customer extends Person{
 
      */
     public Customer(String firstName, String lastName, String dateOfBirth, int identNum, String address,
-                    String phoneNum, Checking checking, Savings savings, Credit credit) {
-        super(firstName, lastName, dateOfBirth, identNum, address, phoneNum);
+                    String phoneNum, String email, String password, Checking checking, Savings savings, Credit credit) {
+        super(firstName, lastName, dateOfBirth, identNum, address, phoneNum, email);
         this.checking = checking;
         this.savings = savings;
         this.credit = credit;
+        this.password = password;
     }
 
     /**
@@ -111,5 +113,19 @@ public class Customer extends Person{
         transList.add(bankStatement);
     }
 
-
+    /**
+     * This method is used to get password
+     * @return password for customer
+     */
+    public String getPassword() {
+        return password;
+    }
+    /**
+     * This method is used to add bank statements to
+     * transaction list
+     * @param password - password for customer
+     */
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

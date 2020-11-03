@@ -104,9 +104,15 @@ public class RunBank {
 		Account acct = null;
 		System.out.println("Welcome " + firstNameIn + " " + lastNameIn + "\nChecking your credentials...");
 		Customer customer = logIn(firstNameIn, lastNameIn, custList);
-		
 		String curAcct = "";
-		
+		System.out.println("Enter password: ");
+		String password = sc.nextLine();
+
+
+		if(!(customer.getPassword().equals(password))) {
+			System.out.println("Invalid password! Exiting...");
+			return;
+		}
 		if(customer == null) {
 			System.out.println("Name not found! Exiting...");
 			return;
@@ -338,7 +344,7 @@ public class RunBank {
 			String line = "";
 			String[] header = br.readLine().split(",");
 			
-			int id=-1, ln=-1, fn=-1, ad=-1, pn=-1, dob=-1, chan=-1, san=-1, cran=-1, chsb=-1, ssb=-1, crsb=-1, cm=-1;
+			int id=-1, ln=-1, fn=-1, ad=-1, pn=-1, dob=-1, chan=-1, san=-1, cran=-1, chsb=-1, ssb=-1, crsb=-1, cm=-1, pwd=-1, em=-1;
 			
 			for (int i = 0; i<header.length; i++)
 				if(header[i].contains("Identification Number")){ id = i; }
@@ -354,6 +360,8 @@ public class RunBank {
 				else if(header[i].contains("Savings Starting Balance")) { ssb = i; }
 				else if(header[i].contains("Credit Starting Balance")) { crsb = i; }
 				else if(header[i].contains("Credit Max")) { cm = i; }
+				else if(header[i].contains("Password")) { pwd = i; }
+				else if(header[i].contains("Email")) { em = i; }
 			
 			while ((line = br.readLine()) != null) {
 				String[] fields = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
@@ -370,11 +378,14 @@ public class RunBank {
 				double savingsBal = Double.parseDouble(fields[ssb]);
 				double creditBal = Double.parseDouble(fields[crsb]);
 				double creditMax = Double.parseDouble(fields[cm]);
+				String email = fields[em];
+				String password = fields[pwd];
+
 				Checking newCheckingAcct = new Checking(firstName, lastName, checkingNum, checkingBal);
 				Savings newSavingsAcct = new Savings(firstName, lastName, savingsNum, savingsBal);
 				Credit newCreditAcct = new Credit(firstName, lastName, creditNum, creditBal, creditMax);
 
-				Customer newCust = new Customer(firstName, lastName, dateOfBirth, identNum, address, phoneNum, newCheckingAcct, newSavingsAcct, newCreditAcct);
+				Customer newCust = new Customer(firstName, lastName, dateOfBirth, identNum, address, phoneNum, email, password, newCheckingAcct, newSavingsAcct, newCreditAcct);
 				newCust.getCredit().setCreditMax(creditMax);
 				custList.add(newCust);	
 
@@ -850,7 +861,11 @@ public class RunBank {
 		if (inp2.equalsIgnoreCase("y")) {
 			newCreditAcct = new Credit(firstName, lastName, max[2]+1, 0, 5000);
 		}
-		Customer newCust = new Customer(firstName, lastName, dob, max[3]+1, address, phoneNum, newCheckingAcct, newSavingsAcct, newCreditAcct);
+
+		String password = lastName + "*" + firstName + "!987";
+		String tempEmail = firstName + lastName + "@disney.com";
+
+		Customer newCust = new Customer(firstName, lastName, dob, max[3]+1, address, phoneNum, tempEmail, password, newCheckingAcct, newSavingsAcct, newCreditAcct);
 		custList.add(newCust);
 		printData(newCust);
 		return custList;
