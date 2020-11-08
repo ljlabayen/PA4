@@ -33,10 +33,12 @@ public class RunBank {
 	
 	/**
 	 * Main method to start program
+	 * Taken from Laurence
 	 */
 	public static void main(String args[]) throws IOException {
-		Scanner sc = new Scanner(System.in); 
-		String file = "./PA4/src/CS 3331 - Bank Users 4.csv";
+		Scanner sc = new Scanner(System.in);
+		//Fixed pathfile
+		String file = "CS 3331 - Bank Users 4.csv";
 		List<Customer> custList = readCSV(file);
 		//List<BankStatement> bsList = new ArrayList<BankStatement>();
 		System.out.println("Welcome to the Bank of Miners!\n");
@@ -331,6 +333,7 @@ public class RunBank {
 		return null;
 	}
 	/**
+	 * This was taken form Laurence
 	 * This method is used to read a CSV and convert to a list
 	 * @param fileName - File name String
 	 * @return List of customers
@@ -338,9 +341,8 @@ public class RunBank {
 	 */
 	public static List<Customer> readCSV(String fileName) throws IOException {
 		FileWriter myWriter = new FileWriter("./PA4/src/bankLog.txt",true);
-		String file = fileName;
 		List<Customer> custList = new ArrayList<Customer>();
-		try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+		try(BufferedReader br = new BufferedReader(new FileReader(fileName))) {
 			String line = "";
 			String[] header = br.readLine().split(",");
 			
@@ -396,17 +398,18 @@ public class RunBank {
 		return custList;
 	}
 	/**
+	 * This was taken from Laurence
 	 * This method is used to write customer list to a CSV
 	 * @param custList - List of customers
 	 * @exception
 	 */
 	public static void toCSV(List<Customer> custList) throws IOException {
 		
-		String file = "./PA4/src/updatedCSV.csv";
+		String file = "updatedCSV.csv";
 		try {
 			FileWriter writer = new FileWriter(file);
 			writer.append("First Name,Last Name,Date of Birth,IdentificationNumber,Address,"
-					+ "Phone Number,Checking Account Number,Savings Account Number,Credit Account Number"
+					+ "Phone Number,Email,Password,Checking Account Number,Savings Account Number,Credit Account Number"
 					+ ",Checking Starting Balance,Savings Starting Balance,Credit Starting Balance, Credit Max\n");
 			for (Customer cust : custList)	{
 				List<String> list = new ArrayList<String>();
@@ -417,6 +420,8 @@ public class RunBank {
 				list.add(Integer.toString(cust.getIdentNum()));
 				list.add(cust.getAddress()); // quotes already added
 				list.add(cust.getPhoneNum());
+				list.add(cust.getEmail());
+				list.add(cust.getPassword());
 				String chNum = (cust.getChecking() != null) ? Integer.toString(cust.getChecking().getAccountNumber()) : "";
 				list.add(chNum);
 				list.add(Integer.toString(cust.getSavings().getAccountNumber()));
@@ -490,6 +495,8 @@ public class RunBank {
 	
 	}
 	/**
+	 * Taken from Laurence
+	 * Modified by Alfonso
 	 * This method is used for bank manager inquiries
 	 * @param custList - List of customers
 	 * @exception
@@ -497,110 +504,123 @@ public class RunBank {
 	public static void bankManager(List<Customer> custList) throws IOException {
 		Scanner sc = new Scanner(System.in); 
 		BufferedReader inp = new BufferedReader (new InputStreamReader(System.in));
-		System.out.println("Welcome Bank Manager!\n");
-		System.out.println("1. Inquire account by name"); 
-		System.out.println("2. Inquire account by type/number");
-		System.out.println("3. Print all customers");
-		System.out.println("4. Write bank statement by name");
-		System.out.println("5. Main Menu");
-		System.out.println("6. Exit");
-		int option  = sc.nextInt();
-		switch(option) {
-		case 1:
-			System.out.println("Enter first name of customer: ");
-			String firstNameIn = sc.nextLine();
-			System.out.println("Enter last name of customer: ");
-			String lastNameIn = sc.nextLine();
-			Customer customer = logIn(firstNameIn, lastNameIn, custList);
-			
-			if(customer == null) { System.out.println("Name not found! Going back!"); return; }
-			printData(customer);
-			
-			break;
-		case 2: 
-			System.out.println("1. Checking");
-			System.out.println("2. Savings");
-			System.out.println("3. Credit");
-			int option2 = sc.nextInt();
-			System.out.println("Enter Account Number: ");
-			int acctNum = sc.nextInt();
-			switch(option2) {
-			case 1:
-				for (Customer acct : custList) {
-					if (acctNum == acct.getChecking().getAccountNumber()) {
-						printData(acct);
-						break;
+		boolean inMenu = true;
+		while(inMenu) {  //taken from alfonso
+			System.out.println("Welcome Bank Manager!\n");
+			System.out.println("1. Inquire account by name");
+			System.out.println("2. Inquire account by type/number");
+			System.out.println("3. Print all customers");
+			System.out.println("4. Write bank statement by name");
+			System.out.println("5. Main Menu");
+			System.out.println("6. Exit");
+			int option = sc.nextInt();
+			switch (option) {
+				case 1:
+					System.out.println("Enter first name of customer: ");
+					String firstNameIn = sc.nextLine();
+					System.out.println("Enter last name of customer: ");
+					String lastNameIn = sc.nextLine();
+					Customer customer = logIn(firstNameIn, lastNameIn, custList);
+
+					if (customer == null) {
+						System.out.println("Name not found! Going back!");
+						return;
 					}
-				}
-				System.out.println("No match found in checking!");
-				break;
-			case 2:
-				for (Customer acct : custList) {
-					if (acctNum == acct.getSavings().getAccountNumber()) {
-						printData(acct);
-						break;
+					printData(customer);
+
+					break;
+				case 2:
+					System.out.println("1. Checking");
+					System.out.println("2. Savings");
+					System.out.println("3. Credit");
+					int option2 = sc.nextInt();
+					System.out.println("Enter Account Number: ");
+					int acctNum = sc.nextInt();
+					switch (option2) {
+						case 1:
+							for (Customer acct : custList) {
+								if (acctNum == acct.getChecking().getAccountNumber()) {
+									printData(acct);
+									break;
+								}
+							}
+							System.out.println("No match found in checking!");
+							break;
+						case 2:
+							for (Customer acct : custList) {
+								if (acctNum == acct.getSavings().getAccountNumber()) {
+									printData(acct);
+									break;
+								}
+							}
+							System.out.println("No match found in savings!");
+							break;
+						case 3:
+							for (Customer acct : custList) {
+								if (acctNum == acct.getCredit().getAccountNumber()) {
+									printData(acct);
+									break;
+								}
+							}
+							System.out.println("No match found in credit!");
+							break;
 					}
-				}
-				System.out.println("No match found in savings!");
-				break;
-			case 3:
-				for (Customer acct : custList) {
-					if (acctNum == acct.getCredit().getAccountNumber()) {
+				case 3:
+					for (Customer acct : custList) {
 						printData(acct);
-						break;
 					}
-				}
-				System.out.println("No match found in credit!");
-				break;
+					break;
+				case 4:
+
+					System.out.println("Enter first name of customer: ");
+					firstNameIn = inp.readLine();
+					System.out.println("Enter last name of customer: ");
+					lastNameIn = inp.readLine();
+					Customer cust = logIn(firstNameIn, lastNameIn, custList);
+
+					if (cust == null) {
+						System.out.println("Name not found! Going back!");
+						return;
+					}
+
+					String file = "./PA4/src/BankStatements/" + cust.getFirstName() + "_" + cust.getLastName() + "_BankStatement.txt";
+					try {
+						FileWriter writer = new FileWriter(file);
+						writer.append("Name: " + cust.getFirstName() + " " + cust.getLastName());
+						writer.append("\n Identification #" + cust.getIdentNum());
+						writer.append("\n Date of Birth: " + cust.getDateOfBirth());
+						writer.append("\n Address: " + cust.getAddress());
+						writer.append("\n Phone Number: " + cust.getPhoneNum());
+
+						writer.append("\n Savings Account #" + cust.getSavings().getAccountNumber());
+						writer.append(" Balance: " + cust.getSavings().getAccountBalance());
+						if (cust.getChecking() != null) {
+							writer.append("\n Checking Account #" + cust.getChecking().getAccountNumber());
+							writer.append(" Balance: " + cust.getChecking().getAccountBalance());
+						}
+						if (cust.getCredit() != null) {
+							writer.append("\n Credit Account: #" + cust.getCredit().getAccountNumber());
+							writer.append(" Balance: " + cust.getCredit().getAccountBalance());
+						}
+						writer.append("\r\n");
+						writer.append("TRANSACTION HISTORY: ");
+						if (cust.getTransList() != null) {
+							writer.append("\n" + printTrans(cust.getTransList()));
+						}
+						System.out.println("Written to " + cust.getFirstName() + "_" + cust.getLastName() + "_BankStatement.txt\n");
+						writer.close();
+						return;
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					return;
+				case 5:
+					inMenu = false;
+					System.out.println("Goodbye!");
+					return;
+				case 6:
+					System.exit(0);
 			}
-		case 3:
-			for (Customer acct : custList) { printData(acct); }
-			break;
-		case 4:
-
-			System.out.println("Enter first name of customer: ");
-			firstNameIn = inp.readLine();
-			System.out.println("Enter last name of customer: ");
-			lastNameIn = inp.readLine();
-			Customer cust = logIn(firstNameIn, lastNameIn, custList);
-			
-			if(cust == null) { System.out.println("Name not found! Going back!"); return; }
-
-			String file = "./PA4/src/BankStatements/" + cust.getFirstName() + "_" + cust.getLastName() + "_BankStatement.txt";
-			try {
-				FileWriter writer = new FileWriter(file);
-				writer.append("Name: " + cust.getFirstName() + " " + cust.getLastName());
-				writer.append("\n Identification #" + cust.getIdentNum());
-				writer.append("\n Date of Birth: " + cust.getDateOfBirth());
-				writer.append("\n Address: " + cust.getAddress());
-				writer.append("\n Phone Number: " + cust.getPhoneNum());
-
-				writer.append("\n Savings Account #" + cust.getSavings().getAccountNumber());
-				writer.append(" Balance: " + cust.getSavings().getAccountBalance());
-				if (cust.getChecking() != null) {
-					writer.append("\n Checking Account #" + cust.getChecking().getAccountNumber());
-					writer.append(" Balance: " + cust.getChecking().getAccountBalance());
-				}
-				if (cust.getCredit() != null) {
-					writer.append("\n Credit Account: #" + cust.getCredit().getAccountNumber());
-					writer.append(" Balance: " + cust.getCredit().getAccountBalance());
-				}
-				writer.append("\r\n");
-				writer.append("TRANSACTION HISTORY: ");
-				if(cust.getTransList() != null) {
-					writer.append("\n" + printTrans(cust.getTransList()));
-				}
-				System.out.println("Written to " + cust.getFirstName() + "_" + cust.getLastName() + "_BankStatement.txt\n");
-				writer.close();
-				return;
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		return;
-		case 5:
-			return;
-		case 6:
-			System.exit(0);
 		}
 		return;
 	}
