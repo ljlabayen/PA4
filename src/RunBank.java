@@ -38,7 +38,7 @@ public class RunBank {
 	public static void main(String args[]) throws IOException {
 		Scanner sc = new Scanner(System.in);
 		//Fixed pathfile
-		String file = "CS 3331 - Bank Users 4.csv";
+		String file = "./PA4/src/CS 3331 - Bank Users 4.csv";
 		List<Customer> custList = readCSV(file);
 		//List<BankStatement> bsList = new ArrayList<BankStatement>();
 		System.out.println("Welcome to the Bank of Miners!\n");
@@ -162,102 +162,106 @@ public class RunBank {
 			}
 			//acct.getAccountNumber();
 			if(option1 > 0) {
-				System.out.println("1. Inquire Balance");
-				System.out.println("2. Withdraw");
-				System.out.println("3. Deposit ");
-				System.out.println("4. Transfer Between Accounts");
-				System.out.println("5. Pay Someone");
-				System.out.println("6. Exit");
-				int option2 = sc.nextInt();
-				double prevBalance = acct.getAccountBalance();
-				Date date = new Date();
-				switch(option2) {
-				case 1:
-					System.out.println(acct.getAccountNumber() + " - Balance: " + acct.getAccountBalance());
-					toLog(option2, acct, logMessage, balanceTemp, recipient);
-					break;
-				case 2:
-					
-					System.out.println("Enter amount to be widthrawn: ");
-					double withdrawAmount = sc.nextDouble();
-					System.out.println(acct.getAccountNumber() + " - Balance: " + acct.getAccountBalance());
-					acct.withdrawal(withdrawAmount);
-					System.out.println(acct.getAccountNumber() + " - New balance: " + acct.getAccountBalance() + "\n");
-					
-					customer.appendTransList(new BankStatement(date.toString(), "withdraws", curAcct, withdrawAmount, prevBalance, acct.getAccountBalance()));
-					toCSV(custList);
-					toLog(option2, acct, "Withdraws", balanceTemp, Double.toString(withdrawAmount));
-					break;
-				case 3:
-					System.out.println("Enter amount to be deposited: ");
-					double depositAmount = sc.nextDouble();
-					double tempBal = Math.abs(acct.getAccountBalance());
-					System.out.println(acct.getAccountNumber() + " - Balance: " + acct.getAccountBalance());
-					acct.deposit(depositAmount);
-					if (acct instanceof Credit) {
-						if (depositAmount > tempBal) {
-							System.out.println("Deposit amount is more than balance");
-							acct.setAccountBalance(acct.getAccountBalance() - depositAmount);
-						}
+				boolean inMenu = true;
+				while(inMenu) {
+					System.out.println("1. Inquire Balance");
+					System.out.println("2. Withdraw");
+					System.out.println("3. Deposit ");
+					System.out.println("4. Transfer Between Accounts");
+					System.out.println("5. Pay Someone");
+					System.out.println("6. Exit");
+					int option2 = sc.nextInt();
+					double prevBalance = acct.getAccountBalance();
+					Date date = new Date();
+					switch (option2) {
+						case 1:
+							System.out.println(acct.getAccountNumber() + " - Balance: " + acct.getAccountBalance());
+							toLog(option2, acct, logMessage, balanceTemp, recipient);
+							break;
+						case 2:
+
+							System.out.println("Enter amount to be widthrawn: ");
+							double withdrawAmount = sc.nextDouble();
+							System.out.println(acct.getAccountNumber() + " - Balance: " + acct.getAccountBalance());
+							acct.withdrawal(withdrawAmount);
+							System.out.println(acct.getAccountNumber() + " - New balance: " + acct.getAccountBalance() + "\n");
+
+							customer.appendTransList(new BankStatement(date.toString(), "withdraws", curAcct, withdrawAmount, prevBalance, acct.getAccountBalance()));
+							toCSV(custList);
+							toLog(option2, acct, "Withdraws", balanceTemp, Double.toString(withdrawAmount));
+							break;
+						case 3:
+							System.out.println("Enter amount to be deposited: ");
+							double depositAmount = sc.nextDouble();
+							double tempBal = Math.abs(acct.getAccountBalance());
+							System.out.println(acct.getAccountNumber() + " - Balance: " + acct.getAccountBalance());
+							acct.deposit(depositAmount);
+							if (acct instanceof Credit) {
+								if (depositAmount > tempBal) {
+									System.out.println("Deposit amount is more than balance");
+									acct.setAccountBalance(acct.getAccountBalance() - depositAmount);
+								}
+							}
+							System.out.println(acct.getAccountNumber() + " - New balance: " + acct.getAccountBalance() + "\n");
+							customer.appendTransList(new BankStatement(date.toString(), "deposits", curAcct, depositAmount, prevBalance, acct.getAccountBalance()));
+							toCSV(custList);
+							toLog(option1, acct, "Deposits", balanceTemp, Double.toString(depositAmount));
+							break;
+						case 4: //transfer between accounts
+							System.out.println("Enter Amount to be transferred");
+							double amount = sc.nextDouble();
+							Account accountType = transferUI(acct, customer, amount);
+							customer.appendTransList(new BankStatement(date.toString(), "transfers", curAcct, amount, prevBalance, acct.getAccountBalance()));
+
+							if (accountType instanceof Checking)
+								toLog(option2, acct, "Transfers to Checking", balanceTemp, recipient);
+							else if (accountType instanceof Savings)
+								toLog(option2, acct, "Transfers to Savings", balanceTemp, recipient);
+							else if (accountType instanceof Credit)
+								toLog(option2, acct, "Transfers to Credit", balanceTemp, recipient);
+							break;
+						case 5:
+							// prompt user for amount
+							System.out.println("Enter amount to be transferred: ");
+							double transferAmount = sc.nextDouble();
+
+							// check if amount entered is available in account
+							if (transferAmount > acct.getAccountBalance()) {
+								System.out.println("Insufficient funds!");
+								return;
+							}
+							// check for negative number input
+							else if (transferAmount < 0) {
+								System.out.println("Invalid amount!");
+								return;
+							}
+							System.out.println("Enter recipient's first name: ");
+							String recFirstNameIn = inp.readLine();
+							System.out.println("Enter recipient's last name: ");
+							String recLastNameIn = inp.readLine();
+							Customer rec = logIn(recFirstNameIn, recLastNameIn, custList);
+
+							System.out.println("Choose recipient account: ");
+							System.out.println("1. Checking ");
+							System.out.println("2. Savings ");
+							System.out.println("3. Credit ");
+
+							int paysOpt = sc.nextInt();
+
+							Account acctRec = paySomeoneHelper(paysOpt, rec);
+
+							recipient = acct.paySomeone(acct, acctRec, transferAmount);
+							toCSV(custList);
+							customer.appendTransList(new BankStatement(date.toString(), "pays", curAcct, transferAmount, prevBalance, acct.getAccountBalance()));
+							toLog(option2, acct, recipient, balanceTemp, " TO CHECKING ");
+							System.out.println("Debug");
+							break;
+						case 6:
+							inMenu = false;
+							return;
+						case 7:
+							System.exit(0);
 					}
-					System.out.println(acct.getAccountNumber() + " - New balance: " + acct.getAccountBalance() + "\n");
-					customer.appendTransList(new BankStatement(date.toString(), "deposits", curAcct, depositAmount, prevBalance, acct.getAccountBalance()));
-					toCSV(custList);
-					toLog(option1, acct, "Deposits", balanceTemp, Double.toString(depositAmount));
-					break;
-				case 4: //transfer between accounts
-					System.out.println("Enter Amount to be transferred");
-					double amount = sc.nextDouble();
-					Account accountType = transferUI(acct, customer, amount);
-					customer.appendTransList(new BankStatement(date.toString(), "transfers", curAcct, amount, prevBalance, acct.getAccountBalance()));
-					
-					if (accountType instanceof Checking)
-						toLog(option2, acct, "Transfers to Checking", balanceTemp, recipient );
-					else if (accountType instanceof Savings)
-						toLog(option2, acct, "Transfers to Savings", balanceTemp, recipient );
-					else if (accountType instanceof Credit)
-						toLog(option2, acct, "Transfers to Credit", balanceTemp, recipient );
-					break;
-				case 5:
-					// prompt user for amount
-					System.out.println("Enter amount to be transferred: ");
-					double transferAmount = sc.nextDouble();
-					
-					// check if amount entered is available in account
-					if(transferAmount > acct.getAccountBalance()) {
-						System.out.println("Insufficient funds!");
-						return;
-					}
-					// check for negative number input
-					else if(transferAmount < 0) {
-						System.out.println("Invalid amount!");
-						return;
-					}
-					System.out.println("Enter recipient's first name: ");
-					String recFirstNameIn = inp.readLine();
-					System.out.println("Enter recipient's last name: ");
-					String recLastNameIn = inp.readLine();
-					Customer rec = logIn(recFirstNameIn, recLastNameIn, custList);
-					
-					System.out.println("Choose recipient account: ");
-					System.out.println("1. Checking ");
-					System.out.println("2. Savings ");
-					System.out.println("3. Credit ");
-					
-					int paysOpt = sc.nextInt();
-					
-					Account acctRec = paySomeoneHelper(paysOpt, rec);
-					
-					recipient = acct.paySomeone(acct, acctRec, transferAmount);
-					toCSV(custList);
-					customer.appendTransList(new BankStatement(date.toString(), "pays", curAcct, transferAmount, prevBalance, acct.getAccountBalance()));
-					toLog(option2, acct, recipient, balanceTemp, " TO CHECKING ");
-					System.out.println("Debug");
-					break;
-				case 6:
-					return;
-				case 7:
-					System.exit(0);
 				}
 			}
 		return;
@@ -300,7 +304,7 @@ public class RunBank {
 	 * @return Account type selected from this method
 	 */
 	public static Account transferUI(Account acct, Customer customer, double amount) {
-		Scanner sc = new Scanner(System.in); 
+		Scanner sc = new Scanner(System.in);
 		System.out.println("Choose receiving Account: ");
 		System.out.println("1. Checking: ");
 		System.out.println("2. Savings: ");
@@ -329,6 +333,8 @@ public class RunBank {
 				Account.transferAmount(acct, customer.getCredit(), amount);
 				System.out.println("Transferred " + amount + " to Credit. Your new balance is: " + acct.getAccountBalance());
 				return customer.getChecking();
+			default:
+				System.out.println("Unknown Command. Returning to main menu.");
 		}
 		return null;
 	}
@@ -405,7 +411,7 @@ public class RunBank {
 	 */
 	public static void toCSV(List<Customer> custList) throws IOException {
 		
-		String file = "updatedCSV.csv";
+		String file = "./PA4/src/updatedCSV.csv";
 		try {
 			FileWriter writer = new FileWriter(file);
 			writer.append("First Name,Last Name,Date of Birth,IdentificationNumber,Address,"
@@ -591,6 +597,8 @@ public class RunBank {
 						writer.append("\n Date of Birth: " + cust.getDateOfBirth());
 						writer.append("\n Address: " + cust.getAddress());
 						writer.append("\n Phone Number: " + cust.getPhoneNum());
+						writer.append("\n Email: " + cust.getEmail());
+						writer.append("\n--------------------------------------------------------------\n");
 
 						writer.append("\n Savings Account #" + cust.getSavings().getAccountNumber());
 						writer.append(" Balance: " + cust.getSavings().getAccountBalance());
@@ -604,9 +612,11 @@ public class RunBank {
 						}
 						writer.append("\r\n");
 						writer.append("TRANSACTION HISTORY: ");
+						writer.append("\n==============================================================\n");
 						if (cust.getTransList() != null) {
 							writer.append("\n" + printTrans(cust.getTransList()));
 						}
+
 						System.out.println("Written to " + cust.getFirstName() + "_" + cust.getLastName() + "_BankStatement.txt\n");
 						writer.close();
 						return;
@@ -654,6 +664,7 @@ public class RunBank {
 		System.out.println("Address: " + acct.getAddress());
 		System.out.println("ID: " + acct.getIdentNum());
 		System.out.println("Phone number: " + acct.getPhoneNum());
+		System.out.println("Email: " + acct.getEmail());
 		if(acct.getChecking() != null) { System.out.println("Checking Account #" + acct.getChecking().getAccountNumber() + " - Balance: " + acct.getChecking().getAccountBalance()); }
 		System.out.println("Savings Account #" + acct.getSavings().getAccountNumber() + " - Balance: " + acct.getSavings().getAccountBalance());
 		if(acct.getCredit() != null) { System.out.println("Credit Account #" + acct.getCredit().getAccountNumber() + " - Balance: " + acct.getCredit().getAccountBalance()); }
@@ -818,6 +829,8 @@ public class RunBank {
 		}
 	}
 	/**
+	 * From Laurence
+	 * Modified by Alfonso
 	 * This method is used to create a new customer and add
 	 * to the database
 	 * @param custList - list of customer objects
@@ -825,19 +838,21 @@ public class RunBank {
 	 */
 	public static List<Customer> newAccount(List<Customer> custList) {
 		Scanner sc = new Scanner(System.in); 
-		
-		System.out.println("Enter your name (first name then last name): ");
-		String[] name = sc.nextLine().split(" ");
-		if (name.length != 2) { System.out.println("Name must be first and last name, returning to main menu"); return custList; }
+
+		String firstName = null;
+		String lastName = null;
+		System.out.println("Enter First Name:");
+		firstName = sc.nextLine();
+		System.out.println("Enter Last Name:");
+		lastName = sc.nextLine();
+
 		for (Customer acct : custList) {
-			if (acct.getFirstName().equals(name[0]) && acct.getLastName().equals(name[1])) {
+			if (acct.getFirstName().equals(firstName) && acct.getLastName().equals(lastName)) {
 				System.out.println("Full name already exists in database");
 				return custList;
 			}
 		}
-		String firstName = name[0];
-		String lastName = name[1];
-		
+
 		System.out.println("Enter date of birth (first 3 letters of month, day and year): ");
 		String[] dobIn = sc.nextLine().toLowerCase().split(" ");
 		String dob = dobIn[1]+"-"+dobIn[0].substring(0,1).toUpperCase()+dobIn[0].substring(1)+ "-" + dobIn[2].substring(2,4);
