@@ -18,7 +18,7 @@
 
 import java.util.*;
 
-public abstract class Account {
+public abstract class Account implements printable{
 	private String firstName;
 	private String lastName;
 	private int accountNumber;
@@ -200,6 +200,11 @@ public abstract class Account {
 		
 		return "Transfer amount of " + amount +  " to " + acctRec.getFirstName() + " " + acctRec.getLastName()
 		+ " - " + acctRec.getAccountNumber();
+	}
+
+	public static void printData(Account acct) {
+		System.out.println("Account Number: " + acct.getAccountNumber());
+		System.out.println("Account Balance: " + acct.getAccountBalance());
 	}
 }
 	

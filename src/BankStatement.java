@@ -1,4 +1,6 @@
-public class BankStatement {
+
+
+public class BankStatement implements printable {
 	private String dateTime;
 	private String transType;
 	private String account;
@@ -101,7 +103,19 @@ public class BankStatement {
 	public void setNewBalance(double newBalance) {
 		this.newBalance = newBalance;
 	}
-	
-	
-	
+
+
+
+	public static void printData(Customer acct) {
+		System.out.println("Name: " + acct.getFirstName() + " " + acct.getLastName());
+		System.out.println("Date of Birth: " + acct.getDateOfBirth());
+		System.out.println("Address: " + acct.getAddress());
+		System.out.println("ID: " + acct.getIdentNum());
+		System.out.println("Phone number: " + acct.getPhoneNum());
+		if(acct.getChecking() != null) { System.out.println("Checking Account #" + acct.getChecking().getAccountNumber() + " - Balance: " + acct.getChecking().getAccountBalance()); }
+		System.out.println("Savings Account #" + acct.getSavings().getAccountNumber() + " - Balance: " + acct.getSavings().getAccountBalance());
+		if(acct.getCredit() != null) { System.out.println("Credit Account #" + acct.getCredit().getAccountNumber() + " - Balance: " + acct.getCredit().getAccountBalance()); }
+		System.out.println("\n");
+	}
+
 }

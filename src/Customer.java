@@ -19,7 +19,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Customer extends Person{
+public class Customer extends Person implements printable{
 
     private Checking checking;
     private Savings savings;
@@ -127,5 +127,15 @@ public class Customer extends Person{
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    // From Alfonso
+    public static void printData(Customer acct){
+        System.out.println("Customer Name: " + acct.getFirstName() + " " + acct.getFirstName());
+        System.out.println("Date of birth: " + acct.getDateOfBirth());
+        System.out.println("Identification Number: " + acct.getIdentNum());
+        System.out.println("Address: " + acct.getAddress());
+        System.out.println("Phone Number: " + acct.getPhoneNum());
+        System.out.println();
     }
 }

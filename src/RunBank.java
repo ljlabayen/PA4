@@ -38,7 +38,7 @@ public class RunBank {
 	public static void main(String args[]) throws IOException {
 		Scanner sc = new Scanner(System.in);
 		//Fixed pathfile
-		String file = "CS 3331 - Bank Users 4.csv";
+		String file = "./PA4/CS 3331 - Bank Users 4.csv";
 		List<Customer> custList = readCSV(file);
 		//List<BankStatement> bsList = new ArrayList<BankStatement>();
 		System.out.println("Welcome to the Bank of Miners!\n");
@@ -173,7 +173,7 @@ public class RunBank {
 				Date date = new Date();
 				switch(option2) {
 				case 1:
-					System.out.println(acct.getAccountNumber() + " - Balance: " + acct.getAccountBalance());
+					Account.printData(acct); //PA4 interface requirement
 					toLog(option2, acct, logMessage, balanceTemp, recipient);
 					break;
 				case 2:
@@ -526,7 +526,7 @@ public class RunBank {
 						System.out.println("Name not found! Going back!");
 						return;
 					}
-					printData(customer);
+					BankStatement.printData(customer); // PA4 interface requirement
 
 					break;
 				case 2:
@@ -540,7 +540,7 @@ public class RunBank {
 						case 1:
 							for (Customer acct : custList) {
 								if (acctNum == acct.getChecking().getAccountNumber()) {
-									printData(acct);
+									BankStatement.printData(acct); // PA4 interface requirement
 									break;
 								}
 							}
@@ -549,7 +549,7 @@ public class RunBank {
 						case 2:
 							for (Customer acct : custList) {
 								if (acctNum == acct.getSavings().getAccountNumber()) {
-									printData(acct);
+									BankStatement.printData(acct); // PA4 interface requirement
 									break;
 								}
 							}
@@ -558,7 +558,7 @@ public class RunBank {
 						case 3:
 							for (Customer acct : custList) {
 								if (acctNum == acct.getCredit().getAccountNumber()) {
-									printData(acct);
+									BankStatement.printData(acct); // PA4 interface requirement
 									break;
 								}
 							}
@@ -567,7 +567,7 @@ public class RunBank {
 					}
 				case 3:
 					for (Customer acct : custList) {
-						printData(acct);
+						Customer.printData(acct); // PA4 interface requirement
 					}
 					break;
 				case 4:
@@ -644,21 +644,7 @@ public class RunBank {
 		return print;
 	}
 
-	/**
-	 * This method is used to print data of a given account
-	 * @param acct - account used for printing
-	 */
-	public static void printData(Customer acct) {
-		System.out.println("Name: " + acct.getFirstName() + " " + acct.getLastName());
-		System.out.println("Date of Birth: " + acct.getDateOfBirth());
-		System.out.println("Address: " + acct.getAddress());
-		System.out.println("ID: " + acct.getIdentNum());
-		System.out.println("Phone number: " + acct.getPhoneNum());
-		if(acct.getChecking() != null) { System.out.println("Checking Account #" + acct.getChecking().getAccountNumber() + " - Balance: " + acct.getChecking().getAccountBalance()); }
-		System.out.println("Savings Account #" + acct.getSavings().getAccountNumber() + " - Balance: " + acct.getSavings().getAccountBalance());
-		if(acct.getCredit() != null) { System.out.println("Credit Account #" + acct.getCredit().getAccountNumber() + " - Balance: " + acct.getCredit().getAccountBalance()); }
-		System.out.println("\n");
-	}
+
 	/**
 	 * This to read a CSV to simulate multiple users accessing
 	 * the bank and their accounts
@@ -887,7 +873,7 @@ public class RunBank {
 
 		Customer newCust = new Customer(firstName, lastName, dob, max[3]+1, address, phoneNum, tempEmail, password, newCheckingAcct, newSavingsAcct, newCreditAcct);
 		custList.add(newCust);
-		printData(newCust);
+		BankStatement.printData(newCust); // PA4 interface requirement
 		return custList;
 	}
 	/**
