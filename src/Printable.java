@@ -1,7 +1,7 @@
 interface printable {
-    static void printData(Customer acct) {
+    public static void printData(Customer acct) {
 
-    }public class Printable {
+    }public static void printDataHidden(Customer acct){
 
     }
 

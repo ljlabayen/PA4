@@ -206,5 +206,9 @@ public abstract class Account implements printable{
 		System.out.println("Account Number: " + acct.getAccountNumber());
 		System.out.println("Account Balance: " + acct.getAccountBalance());
 	}
+
+	public static void printDataHidden(Account acct){
+
+	}
 }
 	

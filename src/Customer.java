@@ -136,6 +136,20 @@ public class Customer extends Person implements printable{
         System.out.println("Identification Number: " + acct.getIdentNum());
         System.out.println("Address: " + acct.getAddress());
         System.out.println("Phone Number: " + acct.getPhoneNum());
+        System.out.println("Email: " + acct.getEmail());
+        if(acct.getChecking() != null) { System.out.println("Checking Account #" + acct.getChecking().getAccountNumber() + " - Balance: " + acct.getChecking().getAccountBalance()); }
+        System.out.println("Savings Account #" + acct.getSavings().getAccountNumber() + " - Balance: " + acct.getSavings().getAccountBalance());
+        if(acct.getCredit() != null) { System.out.println("Credit Account #" + acct.getCredit().getAccountNumber() + " - Balance: " + acct.getCredit().getAccountBalance()); }
+        System.out.println();
+    }
+
+    public static void printDataHidden(Customer acct){
+        System.out.println("Customer Name: " + acct.getFirstName() + " " + acct.getFirstName());
+        System.out.println("Date of birth: " + acct.getDateOfBirth());
+        System.out.println("Identification Number: " + acct.getIdentNum());
+        System.out.println("Address: " + acct.getAddress());
+        System.out.println("Phone Number: " + acct.getPhoneNum());
+        System.out.println("Email: " + acct.getEmail());
         System.out.println();
     }
 }

@@ -240,6 +240,7 @@ public class RunBank {
 							System.out.println("Enter recipient's last name: ");
 							String recLastNameIn = inp.readLine();
 							Customer rec = logIn(recFirstNameIn, recLastNameIn, custList);
+							BankStatement.printDataHidden(rec);
 
 							System.out.println("Choose recipient account: ");
 							System.out.println("1. Checking ");
