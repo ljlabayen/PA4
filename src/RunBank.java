@@ -55,7 +55,7 @@ public class RunBank {
 				userInt(custList);
 				break;
 			case 2:
-				custList = newAccount(custList);
+				custList = createNewUser(custList);
 				break;
 			case 3:
 				bankManager(custList);
@@ -854,6 +854,11 @@ public class RunBank {
 				return custList;
 			}
 		}
+		//PA4 requirement from rubric
+		System.out.println("Enter email address: ");
+		String email = sc.nextLine();
+		System.out.println("Enter desired password for your account: ");
+		String password = sc.nextLine();
 
 		System.out.println("Enter date of birth (first 3 letters of month, day and year): ");
 		String[] dobIn = sc.nextLine().toLowerCase().split(" ");
@@ -880,9 +885,16 @@ public class RunBank {
 			inputPhNum = sc.nextLine();
 		}
 		String phoneNum = inputPhNum.replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");
-		
-		int[] max = findMaxNum(custList); //max[0] = checking, max[1] = savings, max[2] = credit;
-		Savings newSavingsAcct = new Savings(firstName, lastName, max[1]+1, 0);
+
+		//int[] max = findMaxNum(custList); //max[0] = checking, max[1] = savings, max[2] = credit;
+
+		// From Alfonso
+		int idMax = getNextAccountNumber("ID", custList);
+		int checkingMax = getNextAccountNumber("Checking", custList);
+		int savingsMax = getNextAccountNumber("Savings", custList);
+		int creditMax = getNextAccountNumber("Credit", custList);
+
+		Savings newSavingsAcct = new Savings(firstName, lastName, savingsMax, 0);
 		
 		System.out.println("Would you like to create a checking account? (Y/N)"); //handle null 
 		String inp1 = sc.nextLine();
@@ -892,17 +904,17 @@ public class RunBank {
 		Checking newCheckingAcct = null;
 		Credit newCreditAcct = null;
 		if (inp1.equalsIgnoreCase("y")){
-			newCheckingAcct = new Checking(firstName, lastName, max[0]+1, 0);
+			newCheckingAcct = new Checking(firstName, lastName, checkingMax, 0);
 			
 		}
 		if (inp2.equalsIgnoreCase("y")) {
-			newCreditAcct = new Credit(firstName, lastName, max[2]+1, 0, 5000);
+			newCreditAcct = new Credit(firstName, lastName, creditMax, 0, 5000);
 		}
 
-		String password = lastName + "*" + firstName + "!987";
-		String tempEmail = firstName + lastName + "@disney.com";
+		//String password = lastName + "*" + firstName + "!987";
+		//String tempEmail = firstName + lastName + "@disney.com";
 
-		Customer newCust = new Customer(firstName, lastName, dob, max[3]+1, address, phoneNum, tempEmail, password, newCheckingAcct, newSavingsAcct, newCreditAcct);
+		Customer newCust = new Customer(firstName, lastName, dob, idMax, address, phoneNum, email, password, newCheckingAcct, newSavingsAcct, newCreditAcct);
 		custList.add(newCust);
 		//Account.printData(newCust); FIX
 		return custList;
@@ -940,5 +952,174 @@ public class RunBank {
 		
 		return max;
 	}
-	
+
+	/**
+	 * From Alfonso
+	 * Modified by Laurence
+	 * This method is used to find the maximum number for each
+	 * account in the list
+	 * @param customer - list of customer objects
+	 * @return largest number for given account type or ID
+	 */
+	private static int getNextAccountNumber(String account, List<Customer> customer){
+		int largest = 0;
+		switch (account){
+			case "ID":
+				for(int i = 0; i < customer.size(); i++){
+					if (customer.get(i).getIdentNum() > largest)
+						largest = customer.get(i).getIdentNum();
+				}
+				break;
+			case "Checking":
+				for(int i = 0; i < customer.size(); i++){
+					if (customer.get(i).getChecking().getAccountNumber() > largest)
+						largest = customer.get(i).getChecking().getAccountNumber();
+				}
+				break;
+			case "Savings":
+				for(int i = 0; i < customer.size(); i++){
+					if (customer.get(i).getSavings().getAccountNumber() > largest)
+						largest = customer.get(i).getSavings().getAccountNumber();
+				}
+				break;
+			case "Credit":
+				for(int i = 0; i < customer.size(); i++){
+					if (customer.get(i).getCredit().getAccountNumber() > largest)
+						largest = customer.get(i).getCredit().getAccountNumber();
+				}
+				break;
+			default:
+				System.out.println("ERROR. Unknown account type");
+
+		}
+		return largest + 1;
+	}
+	/**
+	 * From Alfonso, modified by Laurence
+	 * Create new customer for bank
+	 * @param custList - list of customer objects
+	 * @return updated customer list
+	 * @throws IOException If there is no file to read.
+	 */
+	private static List<Customer> createNewUser(List<Customer> custList) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		// Getting basic information
+		boolean getName = true;
+		String firstName = null;
+		String lastName = null;
+		while(getName) {
+			System.out.println("Lets start with your name:");
+			System.out.println("Enter First Name:");
+			firstName = br.readLine();
+			System.out.println("Enter Last Name:");
+			lastName = br.readLine();
+
+			if (validateNewUser(firstName, lastName, custList)) {
+				System.out.println("User Already Exists!");
+				return custList; //modified
+			}else{
+				getName = false;
+			}
+		}
+
+		//PA4 requirement from rubric
+		System.out.println("Enter email address: ");
+		String email = br.readLine();
+		System.out.println("Enter desired password for your account: ");
+		String password = br.readLine();
+
+
+		System.out.println("Enter Date Of Birth (DD-MON-YY):");
+		String dob = br.readLine();
+		System.out.println("Enter your Address: ");
+		String address = br.readLine();
+		System.out.println("Enter your Phone Number ((000) 000-0000)");
+		String phoneNum = br.readLine();
+		System.out.println();
+
+		//Setting up savings account
+		System.out.println("You will start with a savings account");
+		int savingsID = getNextAccountNumber("Savings", custList);
+		double savingsStartingBalance = 0;
+
+		int checkingID = 0;
+		double checkingStartingBalance = 0;
+
+		int creditID = 0;
+		double creditStartingBalance = 0;
+		double creditMax = 0;
+		Savings newSavingsAcct = new Savings(firstName, lastName, savingsID, 0);
+		Checking newCheckingAcct = null;
+		Credit newCreditAcct = null;
+		//Setting up checking and savings account
+		boolean inMenu = true;
+		while(inMenu) {
+			System.out.println("Would you like to to open a Checking or Credit account?");
+			int choice;
+			System.out.println("1. No");
+			System.out.println("2. Checking");
+			System.out.println("3. Credit");
+			System.out.println("4. Checking AND Credit");
+			choice = Integer.parseInt(br.readLine());
+			switch (choice) {
+				case 1:
+					System.out.println("Ok!");
+					inMenu = false;
+					break;
+				case 2:
+					checkingID = getNextAccountNumber("Checking", custList);
+					System.out.println("Checking account Created!");
+					newCheckingAcct = new Checking(firstName, lastName, checkingID, 0);
+					inMenu = false;
+					break;
+				case 3:
+					creditID = getNextAccountNumber("Credit", custList);
+					System.out.println("Default MAX CREDIT set to $1000");
+					System.out.println("Credit account Created!");
+					creditMax = 1000;
+					newCreditAcct = new Credit(firstName, lastName, creditID, 0, creditMax);
+					inMenu = false;
+					break;
+				case 4:
+					checkingID = getNextAccountNumber("Checking", custList);
+					System.out.println("Checking account Created!");
+					creditID = getNextAccountNumber("Credit", custList);
+					System.out.println("Default MAX CREDIT set to $1000");
+					creditMax = 1000;
+					newCheckingAcct = new Checking(firstName, lastName, checkingID, 0);
+					newCreditAcct = new Credit(firstName, lastName, creditID, 0, creditMax);
+					inMenu = false;
+					break;
+				default:
+					System.out.println("Unknown Command");
+			}
+		}
+
+		int customerID = getNextAccountNumber("ID", custList);
+
+		custList.add(new Customer(firstName, lastName, dob, customerID, address, phoneNum, email, password, newCheckingAcct ,newSavingsAcct, newCreditAcct));
+		return custList;
+	}
+
+	/**
+	 * From Alfonso
+	 * This method looks for any user in the file that has the first AND last name that was given
+	 * @param firstName First name String
+	 * @param lastName Last Name String
+	 * @return Returns true if it finds the target first AND last name in file.
+	 */
+	public static boolean validateNewUser(String firstName,String lastName, List<Customer> customer){
+		int i;
+		for(i = 0; i < customer.size(); i++){
+			if (customer.get(i).getFirstName().equals(firstName) && customer.get(i).getLastName().equals(lastName)){
+				return true;
+				//i = customer.size()+1;
+			}
+		}
+		if(i == customer.size()) {
+			return false;
+		}
+		return false;
+	}
 }

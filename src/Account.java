@@ -18,7 +18,7 @@
 
 import java.util.*;
 
-public abstract class Account implements printable{
+public abstract class Account implements Printable{
 	private String firstName;
 	private String lastName;
 	private int accountNumber;
@@ -207,8 +207,13 @@ public abstract class Account implements printable{
 		System.out.println("Account Balance: " + acct.getAccountBalance());
 	}
 
+<<<<<<< HEAD
 	public static void printDataHidden(Account acct){
 
+=======
+	public static void printHidden(Account acct) {
+		System.out.println("Account Number: " + acct.getAccountNumber());
+>>>>>>> ce6ae399e377411aa1edc6e47eb71d367b57ad20
 	}
 }
 	
