@@ -532,7 +532,7 @@ public class RunBank {
 						System.out.println("Name not found! Going back!");
 						return;
 					}
-					printData(customer);
+					BankStatement.printData(customer);
 
 					break;
 				case 2:
@@ -546,7 +546,7 @@ public class RunBank {
 						case 1:
 							for (Customer acct : custList) {
 								if (acctNum == acct.getChecking().getAccountNumber()) {
-									printData(acct);
+									BankStatement.printData(acct);
 									break;
 								}
 							}
@@ -555,7 +555,7 @@ public class RunBank {
 						case 2:
 							for (Customer acct : custList) {
 								if (acctNum == acct.getSavings().getAccountNumber()) {
-									printData(acct);
+									BankStatement.printData(acct);
 									break;
 								}
 							}
@@ -564,7 +564,7 @@ public class RunBank {
 						case 3:
 							for (Customer acct : custList) {
 								if (acctNum == acct.getCredit().getAccountNumber()) {
-									printData(acct);
+									BankStatement.printData(acct);
 									break;
 								}
 							}
@@ -573,7 +573,7 @@ public class RunBank {
 					}
 				case 3:
 					for (Customer acct : custList) {
-						printData(acct);
+						BankStatement.printData(acct);
 					}
 					break;
 				case 4:
@@ -657,7 +657,7 @@ public class RunBank {
 	/**
 	 * This method is used to print data of a given account
 	 * @param acct - account used for printing
-	 */
+
 	public static void printData(Customer acct) {
 		System.out.println("Name: " + acct.getFirstName() + " " + acct.getLastName());
 		System.out.println("Date of Birth: " + acct.getDateOfBirth());
@@ -670,6 +670,7 @@ public class RunBank {
 		if(acct.getCredit() != null) { System.out.println("Credit Account #" + acct.getCredit().getAccountNumber() + " - Balance: " + acct.getCredit().getAccountBalance()); }
 		System.out.println("\n");
 	}
+	*/
 	/**
 	 * This to read a CSV to simulate multiple users accessing
 	 * the bank and their accounts
@@ -902,7 +903,7 @@ public class RunBank {
 
 		Customer newCust = new Customer(firstName, lastName, dob, max[3]+1, address, phoneNum, tempEmail, password, newCheckingAcct, newSavingsAcct, newCreditAcct);
 		custList.add(newCust);
-		printData(newCust);
+		//Account.printData(newCust); FIX
 		return custList;
 	}
 	/**
