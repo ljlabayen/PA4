@@ -16,6 +16,8 @@
 * files were written and produced by me alone.
 */
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public abstract class Account implements Printable{
@@ -209,6 +211,57 @@ public abstract class Account implements Printable{
 
 	public static void printHidden(Account acct) {
 		System.out.println("Account Number: " + acct.getAccountNumber());
+	}
+
+	/**
+	 * From Laurence
+	 * Modified by Alfonso
+	 * This is used to write transaction to a LOG FILE
+	 * This method is used to write customer list to a CSV
+	 * @param option - option selected by user from UserInt
+	 * @param newAcct - account that is being accessed
+	 * @param logMessage - log message depending on user selection
+	 * @param amountTemp - log amount depending on user selection
+	 * @param logMessage2 - another log message used for logging
+	 * @exception
+	 */
+	public void printTransaction(int option, Account newAcct, String logMessage, double amountTemp, String logMessage2) throws IOException {
+		Date date = new Date();
+		try {
+			FileWriter myWriter = new FileWriter("./PA4/src/prjBank/bankLog.txt",true);
+			// check if transaction was NOT a transfer AND there was a change in balance
+			if((option <= 3) && (amountTemp != newAcct.getAccountBalance())) {
+				myWriter.write("(" + date.toString() + ") ACCOUNT NUMBER: " + newAcct.getAccountNumber() + " - " + newAcct.getFirstName() + " "
+						+ newAcct.getLastName() + ":\n" + logMessage + " " + logMessage2 + ", NEW BALANCE: " + newAcct.getAccountBalance() + "\n");
+				myWriter.write("\n");
+				myWriter.close();
+			}
+			if((option == 4) && (amountTemp != newAcct.getAccountBalance())) {
+				myWriter.write("(" + date.toString() + ") ACCOUNT NUMBER: " + newAcct.getAccountNumber() + " - " + newAcct.getFirstName() + " "
+						+ newAcct.getLastName() + ":\n" + logMessage + " AMOUNT:  " + logMessage2 + ", NEW BALANCE: " + newAcct.getAccountBalance() + "\n");
+				myWriter.write("\n");
+				myWriter.close();
+			}
+			// check if transaction was paySomeone AND there was a change in balance
+			else if((option == 5) && (amountTemp != newAcct.getAccountBalance())) {
+				myWriter.write("(" + date.toString() + ") ACCOUNT NUMBER: " + newAcct.getAccountNumber() + " - " + newAcct.getFirstName() + " "
+						+ newAcct.getLastName() + ":\n" + logMessage + ", NEW BALANCE: " + newAcct.getAccountBalance() + "\n");
+				myWriter.write("\n");
+				myWriter.close();
+			}
+
+			// check if transaction was not successful
+			else if (amountTemp == newAcct.getAccountBalance()) {
+				myWriter.write("(" + date.toString() + ") ACCOUNT NUMBER: " + newAcct.getAccountNumber() + " - " + newAcct.getFirstName() + " "
+						+ newAcct.getLastName() + ":\nTRANSACTION NOT COMPLETE! " + logMessage2 + "\n");
+				myWriter.write("\n");
+				myWriter.close();
+			}
+
+		}
+		catch (IOException e) {
+		}
+
 	}
 }
 	

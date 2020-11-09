@@ -1,0 +1,978 @@
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1000 - Mickey Mouse:
+Transfer amount of 100.0 to Donald Duck - 1001, NEW BALANCE: 2754.17
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 2000 - Mickey Mouse:
+transfers Checking AMOUNT:  , NEW BALANCE: 3540.92
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1000 - Mickey Mouse:
+withdraws 3054.17, NEW BALANCE: 3054.17
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 2000 - Mickey Mouse:
+deposits 3054.17, NEW BALANCE: 4040.92
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 2000 - Mickey Mouse:
+TRANSACTION NOT COMPLETE! 
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1036 - Alberto Miranda:
+deposits 5328.97, NEW BALANCE: 5328.97
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1037 - Alex Avila:
+deposits 6471.9400000000005, NEW BALANCE: 6471.9400000000005
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1038 - Alfonso Beltran:
+deposits 6068.87, NEW BALANCE: 6068.87
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1039 - Alfredo Rodriguez:
+deposits 6799.85, NEW BALANCE: 6799.85
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1040 - Alyssandra Cordero:
+deposits 5975.7, NEW BALANCE: 5975.7
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1041 - Anthony Jasso:
+deposits 6565.16, NEW BALANCE: 6565.16
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1042 - Arae Zarzosa:
+deposits 5306.36, NEW BALANCE: 5306.36
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1043 - Brandon Bustamante:
+deposits 6626.2, NEW BALANCE: 6626.2
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1044 - Cesar Cabrera:
+deposits 6541.07, NEW BALANCE: 6541.07
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1045 - Christopher Reyes:
+deposits 5726.32, NEW BALANCE: 5726.32
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1046 - Dafne Bencomo:
+deposits 6968.8099999999995, NEW BALANCE: 6968.8099999999995
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1047 - David Baptiste:
+deposits 6517.41, NEW BALANCE: 6517.41
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1048 - Derek Aguirre:
+deposits 5676.64, NEW BALANCE: 5676.64
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1049 - Eduardo Garcia:
+deposits 6659.23, NEW BALANCE: 6659.23
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1050 - Ervey Montes:
+deposits 5265.1, NEW BALANCE: 5265.1
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1051 - Estevan Ramos:
+deposits 5768.89, NEW BALANCE: 5768.89
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1052 - Federico Marin:
+deposits 5054.19, NEW BALANCE: 5054.19
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1053 - Gavin Baechle:
+deposits 6143.11, NEW BALANCE: 6143.11
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1054 - Gildardo Orea:
+deposits 5998.21, NEW BALANCE: 5998.21
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1055 - Grecia Navarrete:
+deposits 6339.79, NEW BALANCE: 6339.79
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1056 - Hernan Garcia:
+deposits 5715.18, NEW BALANCE: 5715.18
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1057 - Isaiah Landin:
+deposits 5393.56, NEW BALANCE: 5393.56
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1058 - Jose Rodriguez Ortega:
+deposits 5382.42, NEW BALANCE: 5382.42
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1059 - Joseph Medina - Sandoval:
+deposits 5725.73, NEW BALANCE: 5725.73
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1060 - Juan Gutierrez:
+deposits 6296.11, NEW BALANCE: 6296.11
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1061 - Juan Rabelo:
+deposits 6296.87, NEW BALANCE: 6296.87
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1062 - Judith Garcia:
+deposits 5610.64, NEW BALANCE: 5610.64
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1063 - Laura Blanco:
+deposits 6409.83, NEW BALANCE: 6409.83
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1064 - Laurence Labayen:
+deposits 6529.55, NEW BALANCE: 6529.55
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1065 - Lidice Castro Jimenez:
+deposits 5359.48, NEW BALANCE: 5359.48
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1066 - Manuel Melendez Lujan:
+deposits 6531.84, NEW BALANCE: 6531.84
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1067 - Manuel Ruvalcaba:
+deposits 5680.64, NEW BALANCE: 5680.64
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1068 - Mauricio Ornelas-Gutierrez:
+deposits 6158.7, NEW BALANCE: 6158.7
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1069 - Minh Dang:
+deposits 5623.41, NEW BALANCE: 5623.41
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1070 - Oscar Decena:
+deposits 5255.25, NEW BALANCE: 5255.25
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1071 - Robert Evans:
+deposits 5204.97, NEW BALANCE: 5204.97
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1072 - Roberto Carrasco:
+deposits 5141.08, NEW BALANCE: 5141.08
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1073 - Sofia Hernandez:
+deposits 5764.74, NEW BALANCE: 5764.74
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1074 - Yulianna Torres:
+deposits 5156.48, NEW BALANCE: 5156.48
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1036 - Alberto Miranda:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4328.97
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1037 - Alex Avila:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5471.9400000000005
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1038 - Alfonso Beltran:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5068.87
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1039 - Alfredo Rodriguez:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5799.85
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1040 - Alyssandra Cordero:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4975.7
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1041 - Anthony Jasso:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5565.16
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1042 - Arae Zarzosa:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4306.36
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1043 - Brandon Bustamante:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5626.2
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1044 - Cesar Cabrera:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5541.07
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1045 - Christopher Reyes:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4726.32
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1046 - Dafne Bencomo:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5968.8099999999995
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1047 - David Baptiste:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5517.41
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1048 - Derek Aguirre:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4676.64
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1049 - Eduardo Garcia:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5659.23
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1050 - Ervey Montes:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4265.1
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1051 - Estevan Ramos:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4768.89
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1052 - Federico Marin:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4054.1899999999996
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1053 - Gavin Baechle:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5143.11
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1054 - Gildardo Orea:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4998.21
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1055 - Grecia Navarrete:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5339.79
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1056 - Hernan Garcia:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4715.18
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1057 - Isaiah Landin:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4393.56
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1058 - Jose Rodriguez Ortega:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4382.42
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1059 - Joseph Medina - Sandoval:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4725.73
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1060 - Juan Gutierrez:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5296.11
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1061 - Juan Rabelo:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5296.87
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1062 - Judith Garcia:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4610.64
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1063 - Laura Blanco:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5409.83
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1064 - Laurence Labayen:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5529.55
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1065 - Lidice Castro Jimenez:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4359.48
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1066 - Manuel Melendez Lujan:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5531.84
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1067 - Manuel Ruvalcaba:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4680.64
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1068 - Mauricio Ornelas-Gutierrez:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5158.7
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1069 - Minh Dang:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4623.41
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1070 - Oscar Decena:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4255.25
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1071 - Robert Evans:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4204.97
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1072 - Roberto Carrasco:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4141.08
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1073 - Sofia Hernandez:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4764.74
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 1074 - Yulianna Torres:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4156.48
+
+(Mon Nov 09 16:22:27 MST 2020) ACCOUNT NUMBER: 2000 - Mickey Mouse:
+withdraws 3054.17, NEW BALANCE: 3940.92
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1001 - Donald Duck:
+Transfer amount of 48.46 to Alberto Miranda - 1036, NEW BALANCE: 420.35
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2002 - Minnie Mouse:
+withdraws 61.38, NEW BALANCE: 41.82
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1003 - Goofy Disney:
+Transfer amount of 15.63 to Alfonso Beltran - 1038, NEW BALANCE: 1749.9499999999998
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2004 - Pluto Disney:
+withdraws 370.62, NEW BALANCE: 4063.1499999999996
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1005 - Chip Disney:
+Transfer amount of 50.99 to Alyssandra Cordero - 1040, NEW BALANCE: 1086.72
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2006 - Dale Disney:
+withdraws 614.56, NEW BALANCE: 4785.86
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1007 - Cinderella Disney:
+Transfer amount of 28.81 to Arae Zarzosa - 1042, NEW BALANCE: 894.5400000000001
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2008 - Ariel Disney:
+withdraws 320.83, NEW BALANCE: 3099.59
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1009 - Jasmine Disney:
+Transfer amount of 28.89 to Cesar Cabrera - 1044, NEW BALANCE: 1342.1999999999998
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2010 - Aladdin Disney:
+withdraws 1090.55, NEW BALANCE: 3414.81
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1011 - Simba Disney:
+Transfer amount of 39.29 to Dafne Bencomo - 1046, NEW BALANCE: 1500.97
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2012 - Mufassa Disney:
+withdraws 1100.32, NEW BALANCE: 4734.11
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1013 - Aurora Disney:
+Transfer amount of 34.47 to Derek Aguirre - 1048, NEW BALANCE: 534.28
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2014 - Peter Pan:
+withdraws 135.9, NEW BALANCE: 2100.51
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1015 - Woody Disney:
+Transfer amount of 34.04 to Ervey Montes - 1050, NEW BALANCE: 1051.75
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2016 - Buzz Lightyear:
+withdraws 1732.99, NEW BALANCE: 3592.66
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1017 - Jafar Aladdin:
+Transfer amount of 12.36 to Federico Marin - 1052, NEW BALANCE: 1024.0600000000002
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2018 - Ursela Mermaid:
+withdraws 402.17, NEW BALANCE: 1730.29
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1019 - Beast Disney:
+Transfer amount of 26.84 to Gildardo Orea - 1054, NEW BALANCE: 1028.43
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2020 - Belle Disney:
+withdraws 581.63, NEW BALANCE: 1329.08
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1021 - Cruella De Vil:
+Transfer amount of 34.7 to Hernan Garcia - 1056, NEW BALANCE: 1544.21
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2022 - Scar Lion:
+withdraws 1928.48, NEW BALANCE: 416.37
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1023 - Simba King:
+Transfer amount of 11.31 to Jose Rodriguez Ortega - 1058, NEW BALANCE: 1280.03
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2024 - Gaston Disney:
+withdraws 1327.54, NEW BALANCE: 4328.12
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1025 - Shere Khan:
+Transfer amount of 41.2 to Juan Gutierrez - 1060, NEW BALANCE: 1860.58
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2026 - Captaiin Hook:
+withdraws 1794.39, NEW BALANCE: 4570.42
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1027 - Kaa Disney:
+Transfer amount of 11.83 to Judith Garcia - 1062, NEW BALANCE: 1777.69
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2028 - Evil Queen:
+withdraws 1037.81, NEW BALANCE: 2345.06
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1029 - Pinocchio Disney:
+Transfer amount of 34.11 to Laurence Labayen - 1064, NEW BALANCE: 487.35
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2030 - Prince Eric:
+withdraws 1984.69, NEW BALANCE: 3887.06
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1031 - Quasimodo Disney:
+Transfer amount of 25.58 to Manuel Melendez Lujan - 1066, NEW BALANCE: 1429.65
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2032 - Hercules Disney:
+withdraws 1275.9, NEW BALANCE: 4328.97
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1033 - Mulan Disney:
+Transfer amount of 36.48 to Mauricio Ornelas-Gutierrez - 1068, NEW BALANCE: 787.34
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2034 - Lilo Disney:
+withdraws 1448.11, NEW BALANCE: 2451.13
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1035 - Stitch Disney:
+Transfer amount of 29.25 to Oscar Decena - 1070, NEW BALANCE: 1339.24
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2024 - Gaston Disney:
+withdraws 1327.54, NEW BALANCE: 4254.12
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1000 - Mickey Mouse:
+Transfer amount of 17.97 to Roberto Carrasco - 1072, NEW BALANCE: 3036.2000000000003
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2001 - Donald Duck:
+withdraws 420.35, NEW BALANCE: 4820.33
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1002 - Minnie Mouse:
+Transfer amount of 29.5 to Yulianna Torres - 1074, NEW BALANCE: 31.880000000000003
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2003 - Goofy Disney:
+withdraws 1749.9499999999998, NEW BALANCE: 3937.17
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1004 - Pluto Disney:
+Transfer amount of 39.92 to Alex Avila - 1037, NEW BALANCE: 330.7
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2005 - Chip Disney:
+withdraws 1086.72, NEW BALANCE: 4807.06
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1006 - Dale Disney:
+Transfer amount of 50.39 to Alfredo Rodriguez - 1039, NEW BALANCE: 564.17
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2007 - Cinderella Disney:
+withdraws 894.5400000000001, NEW BALANCE: 4322.91
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1008 - Ariel Disney:
+Transfer amount of 46.88 to Anthony Jasso - 1041, NEW BALANCE: 273.95
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2009 - Jasmine Disney:
+withdraws 1342.1999999999998, NEW BALANCE: 2562.87
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1010 - Aladdin Disney:
+Transfer amount of 25.16 to Brandon Bustamante - 1043, NEW BALANCE: 1065.3899999999999
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2011 - Simba Disney:
+withdraws 1500.97, NEW BALANCE: 4628.96
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1012 - Mufassa Disney:
+Transfer amount of 33.54 to Christopher Reyes - 1045, NEW BALANCE: 1066.78
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2000 - Mickey Mouse:
+Transfer amount of 48.46 to David Baptiste - 1047, NEW BALANCE: 3892.46
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1001 - Donald Duck:
+withdraws 341.35, NEW BALANCE: 341.35
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2002 - Minnie Mouse:
+Transfer amount of 15.63 to Eduardo Garcia - 1049, NEW BALANCE: 26.189999999999998
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1003 - Goofy Disney:
+withdraws 1672.9499999999998, NEW BALANCE: 1672.9499999999998
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2004 - Pluto Disney:
+Transfer amount of 50.99 to Estevan Ramos - 1051, NEW BALANCE: 4012.16
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1005 - Chip Disney:
+withdraws 1032.72, NEW BALANCE: 1032.72
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2006 - Dale Disney:
+Transfer amount of 28.81 to Gavin Baechle - 1053, NEW BALANCE: 4757.049999999999
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1007 - Cinderella Disney:
+withdraws 837.5400000000001, NEW BALANCE: 837.5400000000001
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2008 - Ariel Disney:
+Transfer amount of 28.89 to Grecia Navarrete - 1055, NEW BALANCE: 3070.7000000000003
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1009 - Jasmine Disney:
+withdraws 1248.1999999999998, NEW BALANCE: 1248.1999999999998
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2010 - Aladdin Disney:
+Transfer amount of 39.29 to Isaiah Landin - 1057, NEW BALANCE: 3375.52
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1011 - Simba Disney:
+withdraws 1433.97, NEW BALANCE: 1433.97
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2012 - Mufassa Disney:
+Transfer amount of 34.47 to Joseph Medina - Sandoval - 1059, NEW BALANCE: 4699.639999999999
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1013 - Aurora Disney:
+withdraws 434.28, NEW BALANCE: 434.28
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2014 - Peter Pan:
+Transfer amount of 34.04 to Juan Rabelo - 1061, NEW BALANCE: 2066.4700000000003
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1015 - Woody Disney:
+withdraws 961.75, NEW BALANCE: 961.75
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2016 - Buzz Lightyear:
+Transfer amount of 12.36 to Laura Blanco - 1063, NEW BALANCE: 3580.2999999999997
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1017 - Jafar Aladdin:
+withdraws 968.0600000000002, NEW BALANCE: 968.0600000000002
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2018 - Ursela Mermaid:
+Transfer amount of 26.84 to Lidice Castro Jimenez - 1065, NEW BALANCE: 1703.45
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1019 - Beast Disney:
+withdraws 940.4300000000001, NEW BALANCE: 940.4300000000001
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2020 - Belle Disney:
+Transfer amount of 34.7 to Manuel Ruvalcaba - 1067, NEW BALANCE: 1294.3799999999999
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1021 - Cruella De Vil:
+withdraws 1479.21, NEW BALANCE: 1479.21
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2022 - Scar Lion:
+Transfer amount of 11.31 to Minh Dang - 1069, NEW BALANCE: 405.06
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1023 - Simba King:
+withdraws 1202.03, NEW BALANCE: 1202.03
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2024 - Gaston Disney:
+Transfer amount of 41.2 to Robert Evans - 1071, NEW BALANCE: 4212.92
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1025 - Shere Khan:
+withdraws 1774.58, NEW BALANCE: 1774.58
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 2026 - Captaiin Hook:
+Transfer amount of 11.83 to Sofia Hernandez - 1073, NEW BALANCE: 4558.59
+
+(Mon Nov 09 16:22:28 MST 2020) ACCOUNT NUMBER: 1027 - Kaa Disney:
+withdraws 1691.69, NEW BALANCE: 1691.69
+
+(Mon Nov 09 16:23:19 MST 2020) ACCOUNT NUMBER: 1038 - Alfonso Beltran:
+TRANSACTION NOT COMPLETE! 
+
+(Mon Nov 09 16:23:21 MST 2020) ACCOUNT NUMBER: 1038 - Alfonso Beltran:
+Withdraws 34.0, NEW BALANCE: 1034.87
+
+(Mon Nov 09 16:23:25 MST 2020) ACCOUNT NUMBER: 1038 - Alfonso Beltran:
+Deposits 657.0, NEW BALANCE: 1691.87
+
+(Mon Nov 09 16:23:47 MST 2020) ACCOUNT NUMBER: 1038 - Alfonso Beltran:
+Transfer amount of 34.0 to Laurence Labayen - 2064, NEW BALANCE: 1657.87
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1000 - Mickey Mouse:
+Transfer amount of 100.0 to Donald Duck - 1001, NEW BALANCE: 2754.17
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 2000 - Mickey Mouse:
+transfers Checking AMOUNT:  , NEW BALANCE: 3540.92
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1000 - Mickey Mouse:
+withdraws 3054.17, NEW BALANCE: 3054.17
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 2000 - Mickey Mouse:
+deposits 3054.17, NEW BALANCE: 4040.92
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 2000 - Mickey Mouse:
+TRANSACTION NOT COMPLETE! 
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1036 - Alberto Miranda:
+deposits 5328.97, NEW BALANCE: 5328.97
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1037 - Alex Avila:
+deposits 6471.9400000000005, NEW BALANCE: 6471.9400000000005
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1038 - Alfonso Beltran:
+deposits 6068.87, NEW BALANCE: 6068.87
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1039 - Alfredo Rodriguez:
+deposits 6799.85, NEW BALANCE: 6799.85
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1040 - Alyssandra Cordero:
+deposits 5975.7, NEW BALANCE: 5975.7
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1041 - Anthony Jasso:
+deposits 6565.16, NEW BALANCE: 6565.16
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1042 - Arae Zarzosa:
+deposits 5306.36, NEW BALANCE: 5306.36
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1043 - Brandon Bustamante:
+deposits 6626.2, NEW BALANCE: 6626.2
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1044 - Cesar Cabrera:
+deposits 6541.07, NEW BALANCE: 6541.07
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1045 - Christopher Reyes:
+deposits 5726.32, NEW BALANCE: 5726.32
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1046 - Dafne Bencomo:
+deposits 6968.8099999999995, NEW BALANCE: 6968.8099999999995
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1047 - David Baptiste:
+deposits 6517.41, NEW BALANCE: 6517.41
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1048 - Derek Aguirre:
+deposits 5676.64, NEW BALANCE: 5676.64
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1049 - Eduardo Garcia:
+deposits 6659.23, NEW BALANCE: 6659.23
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1050 - Ervey Montes:
+deposits 5265.1, NEW BALANCE: 5265.1
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1051 - Estevan Ramos:
+deposits 5768.89, NEW BALANCE: 5768.89
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1052 - Federico Marin:
+deposits 5054.19, NEW BALANCE: 5054.19
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1053 - Gavin Baechle:
+deposits 6143.11, NEW BALANCE: 6143.11
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1054 - Gildardo Orea:
+deposits 5998.21, NEW BALANCE: 5998.21
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1055 - Grecia Navarrete:
+deposits 6339.79, NEW BALANCE: 6339.79
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1056 - Hernan Garcia:
+deposits 5715.18, NEW BALANCE: 5715.18
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1057 - Isaiah Landin:
+deposits 5393.56, NEW BALANCE: 5393.56
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1058 - Jose Rodriguez Ortega:
+deposits 5382.42, NEW BALANCE: 5382.42
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1059 - Joseph Medina - Sandoval:
+deposits 5725.73, NEW BALANCE: 5725.73
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1060 - Juan Gutierrez:
+deposits 6296.11, NEW BALANCE: 6296.11
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1061 - Juan Rabelo:
+deposits 6296.87, NEW BALANCE: 6296.87
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1062 - Judith Garcia:
+deposits 5610.64, NEW BALANCE: 5610.64
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1063 - Laura Blanco:
+deposits 6409.83, NEW BALANCE: 6409.83
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1064 - Laurence Labayen:
+deposits 6529.55, NEW BALANCE: 6529.55
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1065 - Lidice Castro Jimenez:
+deposits 5359.48, NEW BALANCE: 5359.48
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1066 - Manuel Melendez Lujan:
+deposits 6531.84, NEW BALANCE: 6531.84
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1067 - Manuel Ruvalcaba:
+deposits 5680.64, NEW BALANCE: 5680.64
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1068 - Mauricio Ornelas-Gutierrez:
+deposits 6158.7, NEW BALANCE: 6158.7
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1069 - Minh Dang:
+deposits 5623.41, NEW BALANCE: 5623.41
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1070 - Oscar Decena:
+deposits 5255.25, NEW BALANCE: 5255.25
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1071 - Robert Evans:
+deposits 5204.97, NEW BALANCE: 5204.97
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1072 - Roberto Carrasco:
+deposits 5141.08, NEW BALANCE: 5141.08
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1073 - Sofia Hernandez:
+deposits 5764.74, NEW BALANCE: 5764.74
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1074 - Yulianna Torres:
+deposits 5156.48, NEW BALANCE: 5156.48
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1036 - Alberto Miranda:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4328.97
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1037 - Alex Avila:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5471.9400000000005
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1038 - Alfonso Beltran:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5068.87
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1039 - Alfredo Rodriguez:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5799.85
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1040 - Alyssandra Cordero:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4975.7
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1041 - Anthony Jasso:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5565.16
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1042 - Arae Zarzosa:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4306.36
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1043 - Brandon Bustamante:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5626.2
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1044 - Cesar Cabrera:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5541.07
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1045 - Christopher Reyes:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4726.32
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1046 - Dafne Bencomo:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5968.8099999999995
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1047 - David Baptiste:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5517.41
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1048 - Derek Aguirre:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4676.64
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1049 - Eduardo Garcia:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5659.23
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1050 - Ervey Montes:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4265.1
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1051 - Estevan Ramos:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4768.89
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1052 - Federico Marin:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4054.1899999999996
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1053 - Gavin Baechle:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5143.11
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1054 - Gildardo Orea:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4998.21
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1055 - Grecia Navarrete:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5339.79
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1056 - Hernan Garcia:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4715.18
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1057 - Isaiah Landin:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4393.56
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1058 - Jose Rodriguez Ortega:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4382.42
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1059 - Joseph Medina - Sandoval:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4725.73
+
+(Mon Nov 09 16:27:53 MST 2020) ACCOUNT NUMBER: 1060 - Juan Gutierrez:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5296.11
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1061 - Juan Rabelo:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5296.87
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1062 - Judith Garcia:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4610.64
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1063 - Laura Blanco:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5409.83
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1064 - Laurence Labayen:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5529.55
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1065 - Lidice Castro Jimenez:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4359.48
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1066 - Manuel Melendez Lujan:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5531.84
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1067 - Manuel Ruvalcaba:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4680.64
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1068 - Mauricio Ornelas-Gutierrez:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 5158.7
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1069 - Minh Dang:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4623.41
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1070 - Oscar Decena:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4255.25
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1071 - Robert Evans:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4204.97
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1072 - Roberto Carrasco:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4141.08
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1073 - Sofia Hernandez:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4764.74
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1074 - Yulianna Torres:
+Transfer amount of 1000.0 to Daniel Mejia - 1077, NEW BALANCE: 4156.48
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2000 - Mickey Mouse:
+withdraws 3054.17, NEW BALANCE: 3940.92
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1001 - Donald Duck:
+Transfer amount of 48.46 to Alberto Miranda - 1036, NEW BALANCE: 420.35
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2002 - Minnie Mouse:
+withdraws 61.38, NEW BALANCE: 41.82
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1003 - Goofy Disney:
+Transfer amount of 15.63 to Alfonso Beltran - 1038, NEW BALANCE: 1749.9499999999998
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2004 - Pluto Disney:
+withdraws 370.62, NEW BALANCE: 4063.1499999999996
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1005 - Chip Disney:
+Transfer amount of 50.99 to Alyssandra Cordero - 1040, NEW BALANCE: 1086.72
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2006 - Dale Disney:
+withdraws 614.56, NEW BALANCE: 4785.86
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1007 - Cinderella Disney:
+Transfer amount of 28.81 to Arae Zarzosa - 1042, NEW BALANCE: 894.5400000000001
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2008 - Ariel Disney:
+withdraws 320.83, NEW BALANCE: 3099.59
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1009 - Jasmine Disney:
+Transfer amount of 28.89 to Cesar Cabrera - 1044, NEW BALANCE: 1342.1999999999998
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2010 - Aladdin Disney:
+withdraws 1090.55, NEW BALANCE: 3414.81
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1011 - Simba Disney:
+Transfer amount of 39.29 to Dafne Bencomo - 1046, NEW BALANCE: 1500.97
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2012 - Mufassa Disney:
+withdraws 1100.32, NEW BALANCE: 4734.11
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1013 - Aurora Disney:
+Transfer amount of 34.47 to Derek Aguirre - 1048, NEW BALANCE: 534.28
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2014 - Peter Pan:
+withdraws 135.9, NEW BALANCE: 2100.51
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1015 - Woody Disney:
+Transfer amount of 34.04 to Ervey Montes - 1050, NEW BALANCE: 1051.75
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2016 - Buzz Lightyear:
+withdraws 1732.99, NEW BALANCE: 3592.66
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1017 - Jafar Aladdin:
+Transfer amount of 12.36 to Federico Marin - 1052, NEW BALANCE: 1024.0600000000002
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2018 - Ursela Mermaid:
+withdraws 402.17, NEW BALANCE: 1730.29
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1019 - Beast Disney:
+Transfer amount of 26.84 to Gildardo Orea - 1054, NEW BALANCE: 1028.43
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2020 - Belle Disney:
+withdraws 581.63, NEW BALANCE: 1329.08
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1021 - Cruella De Vil:
+Transfer amount of 34.7 to Hernan Garcia - 1056, NEW BALANCE: 1544.21
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2022 - Scar Lion:
+withdraws 1928.48, NEW BALANCE: 416.37
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1023 - Simba King:
+Transfer amount of 11.31 to Jose Rodriguez Ortega - 1058, NEW BALANCE: 1280.03
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2024 - Gaston Disney:
+withdraws 1327.54, NEW BALANCE: 4328.12
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1025 - Shere Khan:
+Transfer amount of 41.2 to Juan Gutierrez - 1060, NEW BALANCE: 1860.58
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2026 - Captaiin Hook:
+withdraws 1794.39, NEW BALANCE: 4570.42
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1027 - Kaa Disney:
+Transfer amount of 11.83 to Judith Garcia - 1062, NEW BALANCE: 1777.69
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2028 - Evil Queen:
+withdraws 1037.81, NEW BALANCE: 2345.06
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1029 - Pinocchio Disney:
+Transfer amount of 34.11 to Laurence Labayen - 1064, NEW BALANCE: 487.35
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2030 - Prince Eric:
+withdraws 1984.69, NEW BALANCE: 3887.06
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1031 - Quasimodo Disney:
+Transfer amount of 25.58 to Manuel Melendez Lujan - 1066, NEW BALANCE: 1429.65
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2032 - Hercules Disney:
+withdraws 1275.9, NEW BALANCE: 4328.97
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1033 - Mulan Disney:
+Transfer amount of 36.48 to Mauricio Ornelas-Gutierrez - 1068, NEW BALANCE: 787.34
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2034 - Lilo Disney:
+withdraws 1448.11, NEW BALANCE: 2451.13
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1035 - Stitch Disney:
+Transfer amount of 29.25 to Oscar Decena - 1070, NEW BALANCE: 1339.24
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2024 - Gaston Disney:
+withdraws 1327.54, NEW BALANCE: 4254.12
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1000 - Mickey Mouse:
+Transfer amount of 17.97 to Roberto Carrasco - 1072, NEW BALANCE: 3036.2000000000003
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2001 - Donald Duck:
+withdraws 420.35, NEW BALANCE: 4820.33
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1002 - Minnie Mouse:
+Transfer amount of 29.5 to Yulianna Torres - 1074, NEW BALANCE: 31.880000000000003
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2003 - Goofy Disney:
+withdraws 1749.9499999999998, NEW BALANCE: 3937.17
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1004 - Pluto Disney:
+Transfer amount of 39.92 to Alex Avila - 1037, NEW BALANCE: 330.7
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2005 - Chip Disney:
+withdraws 1086.72, NEW BALANCE: 4807.06
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1006 - Dale Disney:
+Transfer amount of 50.39 to Alfredo Rodriguez - 1039, NEW BALANCE: 564.17
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2007 - Cinderella Disney:
+withdraws 894.5400000000001, NEW BALANCE: 4322.91
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1008 - Ariel Disney:
+Transfer amount of 46.88 to Anthony Jasso - 1041, NEW BALANCE: 273.95
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2009 - Jasmine Disney:
+withdraws 1342.1999999999998, NEW BALANCE: 2562.87
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1010 - Aladdin Disney:
+Transfer amount of 25.16 to Brandon Bustamante - 1043, NEW BALANCE: 1065.3899999999999
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2011 - Simba Disney:
+withdraws 1500.97, NEW BALANCE: 4628.96
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1012 - Mufassa Disney:
+Transfer amount of 33.54 to Christopher Reyes - 1045, NEW BALANCE: 1066.78
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2000 - Mickey Mouse:
+Transfer amount of 48.46 to David Baptiste - 1047, NEW BALANCE: 3892.46
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1001 - Donald Duck:
+withdraws 341.35, NEW BALANCE: 341.35
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2002 - Minnie Mouse:
+Transfer amount of 15.63 to Eduardo Garcia - 1049, NEW BALANCE: 26.189999999999998
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1003 - Goofy Disney:
+withdraws 1672.9499999999998, NEW BALANCE: 1672.9499999999998
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2004 - Pluto Disney:
+Transfer amount of 50.99 to Estevan Ramos - 1051, NEW BALANCE: 4012.16
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1005 - Chip Disney:
+withdraws 1032.72, NEW BALANCE: 1032.72
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2006 - Dale Disney:
+Transfer amount of 28.81 to Gavin Baechle - 1053, NEW BALANCE: 4757.049999999999
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1007 - Cinderella Disney:
+withdraws 837.5400000000001, NEW BALANCE: 837.5400000000001
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2008 - Ariel Disney:
+Transfer amount of 28.89 to Grecia Navarrete - 1055, NEW BALANCE: 3070.7000000000003
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1009 - Jasmine Disney:
+withdraws 1248.1999999999998, NEW BALANCE: 1248.1999999999998
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2010 - Aladdin Disney:
+Transfer amount of 39.29 to Isaiah Landin - 1057, NEW BALANCE: 3375.52
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1011 - Simba Disney:
+withdraws 1433.97, NEW BALANCE: 1433.97
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2012 - Mufassa Disney:
+Transfer amount of 34.47 to Joseph Medina - Sandoval - 1059, NEW BALANCE: 4699.639999999999
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1013 - Aurora Disney:
+withdraws 434.28, NEW BALANCE: 434.28
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2014 - Peter Pan:
+Transfer amount of 34.04 to Juan Rabelo - 1061, NEW BALANCE: 2066.4700000000003
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1015 - Woody Disney:
+withdraws 961.75, NEW BALANCE: 961.75
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2016 - Buzz Lightyear:
+Transfer amount of 12.36 to Laura Blanco - 1063, NEW BALANCE: 3580.2999999999997
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1017 - Jafar Aladdin:
+withdraws 968.0600000000002, NEW BALANCE: 968.0600000000002
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2018 - Ursela Mermaid:
+Transfer amount of 26.84 to Lidice Castro Jimenez - 1065, NEW BALANCE: 1703.45
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1019 - Beast Disney:
+withdraws 940.4300000000001, NEW BALANCE: 940.4300000000001
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2020 - Belle Disney:
+Transfer amount of 34.7 to Manuel Ruvalcaba - 1067, NEW BALANCE: 1294.3799999999999
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1021 - Cruella De Vil:
+withdraws 1479.21, NEW BALANCE: 1479.21
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2022 - Scar Lion:
+Transfer amount of 11.31 to Minh Dang - 1069, NEW BALANCE: 405.06
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1023 - Simba King:
+withdraws 1202.03, NEW BALANCE: 1202.03
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2024 - Gaston Disney:
+Transfer amount of 41.2 to Robert Evans - 1071, NEW BALANCE: 4212.92
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1025 - Shere Khan:
+withdraws 1774.58, NEW BALANCE: 1774.58
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 2026 - Captaiin Hook:
+Transfer amount of 11.83 to Sofia Hernandez - 1073, NEW BALANCE: 4558.59
+
+(Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1027 - Kaa Disney:
+withdraws 1691.69, NEW BALANCE: 1691.69
+

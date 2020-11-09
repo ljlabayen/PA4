@@ -103,15 +103,6 @@ public class Customer extends Person implements Printable{
     public List<BankStatement> getTransList() {
         return transList;
     }
-    /**
-     * This method is used to add bank statements to
-     * transaction list
-     * @param bankStatement - bank statement holding
-     * transaction information
-     */
-    public void appendTransList(BankStatement bankStatement) {
-        transList.add(bankStatement);
-    }
 
     /**
      * This method is used to get password
@@ -129,7 +120,23 @@ public class Customer extends Person implements Printable{
         this.password = password;
     }
 
-    // From Alfonso
+    /**
+     * This method is used to add bank statements to
+     * transaction list
+     * @param bankStatement - bank statement holding
+     * transaction information
+     */
+    public void printTransaction(BankStatement bankStatement) {
+        transList.add(bankStatement);
+    }
+
+
+    /**
+     * From Alfonso
+     * Modified by Laurence
+     * This method prints out all the user data when it is called
+     * @param acct The account to be printed
+     */
     public void printData(Customer acct){
         System.out.println("Customer Name: " + acct.getFirstName() + " " + acct.getFirstName());
         System.out.println("Date of birth: " + acct.getDateOfBirth());
@@ -142,7 +149,13 @@ public class Customer extends Person implements Printable{
         System.out.println();
     }
 
-    public static void printDataHidden(Customer acct){
+    /**
+     * From Alfonso
+     * Modified by Laurence
+     * This method prints out all the user data without account information when it is called
+     * @param acct The account to be printed
+     */
+    public void printDataHidden(Customer acct){
         System.out.println("Customer Name: " + acct.getFirstName() + " " + acct.getFirstName());
         System.out.println("Date of birth: " + acct.getDateOfBirth());
         System.out.println("Identification Number: " + acct.getIdentNum());
@@ -151,4 +164,6 @@ public class Customer extends Person implements Printable{
         System.out.println("Email: " + acct.getEmail());
         System.out.println();
     }
+
+
 }

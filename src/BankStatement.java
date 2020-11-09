@@ -105,28 +105,4 @@ public class BankStatement implements Printable {
 	}
 
 
-
-	public static void printData(Customer acct) {
-		System.out.println("Name: " + acct.getFirstName() + " " + acct.getLastName());
-		System.out.println("Date of Birth: " + acct.getDateOfBirth());
-		System.out.println("Address: " + acct.getAddress());
-		System.out.println("ID: " + acct.getIdentNum());
-		System.out.println("Phone number: " + acct.getPhoneNum());
-		System.out.println("Email: " + acct.getEmail());
-		if(acct.getChecking() != null) { System.out.println("Checking Account #" + acct.getChecking().getAccountNumber() + " - Balance: " + acct.getChecking().getAccountBalance()); }
-		System.out.println("Savings Account #" + acct.getSavings().getAccountNumber() + " - Balance: " + acct.getSavings().getAccountBalance());
-		if(acct.getCredit() != null) { System.out.println("Credit Account #" + acct.getCredit().getAccountNumber() + " - Balance: " + acct.getCredit().getAccountBalance()); }
-		System.out.println("\n");
-	}
-
-	public static void printDataHidden(Customer acct){
-		System.out.println("Name: " + acct.getFirstName() + " " + acct.getLastName());
-		System.out.println("Date of Birth: " + acct.getDateOfBirth());
-		System.out.println("Address: " + acct.getAddress());
-		System.out.println("ID: " + acct.getIdentNum());
-		System.out.println("Phone number: " + acct.getPhoneNum());
-		System.out.println("Email: " + acct.getEmail());
-		System.out.println("\n");
-	}
-
 }

@@ -47,7 +47,7 @@ public class RunBank {
 			System.out.println("2. New Account");
 			System.out.println("3. Bank Manager");
 			System.out.println("4. Transaction Reader");
-			
+			System.out.println("5. Exit Bank");
 			
 			int option = sc.nextInt();
 			switch(option) {
@@ -69,6 +69,7 @@ public class RunBank {
 		}
 	}
 	/**
+	 * Taken from Laurence
 	 * This method is used to login with a given string
 	 * @param firstNameIn - Name of customer logging in
 	 * @param custList -  Customer list to search for name
@@ -84,6 +85,8 @@ public class RunBank {
 		return null;
 	}
 	/**
+	 * Taken from Laurence
+	 * Modified by Alfonso
 	 * This method is used for the bank user interface. It will check
 	 * customer credentials. If successful, will give the customer and
 	 * option to select which account to access and interact with. After
@@ -169,14 +172,14 @@ public class RunBank {
 					System.out.println("3. Deposit ");
 					System.out.println("4. Transfer Between Accounts");
 					System.out.println("5. Pay Someone");
-					System.out.println("6. Exit");
+					System.out.println("6. Main Menu");
 					int option2 = sc.nextInt();
 					double prevBalance = acct.getAccountBalance();
 					Date date = new Date();
 					switch (option2) {
 						case 1:
 							System.out.println(acct.getAccountNumber() + " - Balance: " + acct.getAccountBalance());
-							toLog(option2, acct, logMessage, balanceTemp, recipient);
+							acct.printTransaction(option2, acct, logMessage, balanceTemp, recipient);
 							break;
 						case 2:
 
@@ -186,9 +189,9 @@ public class RunBank {
 							acct.withdrawal(withdrawAmount);
 							System.out.println(acct.getAccountNumber() + " - New balance: " + acct.getAccountBalance() + "\n");
 
-							customer.appendTransList(new BankStatement(date.toString(), "withdraws", curAcct, withdrawAmount, prevBalance, acct.getAccountBalance()));
+							customer.printTransaction(new BankStatement(date.toString(), "withdraws", curAcct, withdrawAmount, prevBalance, acct.getAccountBalance()));
 							toCSV(custList);
-							toLog(option2, acct, "Withdraws", balanceTemp, Double.toString(withdrawAmount));
+							acct.printTransaction(option2, acct, "Withdraws", balanceTemp, Double.toString(withdrawAmount));
 							break;
 						case 3:
 							System.out.println("Enter amount to be deposited: ");
@@ -203,22 +206,22 @@ public class RunBank {
 								}
 							}
 							System.out.println(acct.getAccountNumber() + " - New balance: " + acct.getAccountBalance() + "\n");
-							customer.appendTransList(new BankStatement(date.toString(), "deposits", curAcct, depositAmount, prevBalance, acct.getAccountBalance()));
+							customer.printTransaction(new BankStatement(date.toString(), "deposits", curAcct, depositAmount, prevBalance, acct.getAccountBalance()));
 							toCSV(custList);
-							toLog(option1, acct, "Deposits", balanceTemp, Double.toString(depositAmount));
+							acct.printTransaction(option1, acct, "Deposits", balanceTemp, Double.toString(depositAmount));
 							break;
 						case 4: //transfer between accounts
 							System.out.println("Enter Amount to be transferred");
 							double amount = sc.nextDouble();
 							Account accountType = transferUI(acct, customer, amount);
-							customer.appendTransList(new BankStatement(date.toString(), "transfers", curAcct, amount, prevBalance, acct.getAccountBalance()));
+							customer.printTransaction(new BankStatement(date.toString(), "transfers", curAcct, amount, prevBalance, acct.getAccountBalance()));
 
 							if (accountType instanceof Checking)
-								toLog(option2, acct, "Transfers to Checking", balanceTemp, recipient);
+								acct.printTransaction(option2, acct, "Transfers to Checking", balanceTemp, recipient);
 							else if (accountType instanceof Savings)
-								toLog(option2, acct, "Transfers to Savings", balanceTemp, recipient);
+								acct.printTransaction(option2, acct, "Transfers to Savings", balanceTemp, recipient);
 							else if (accountType instanceof Credit)
-								toLog(option2, acct, "Transfers to Credit", balanceTemp, recipient);
+								acct.printTransaction(option2, acct, "Transfers to Credit", balanceTemp, recipient);
 							break;
 						case 5:
 							// prompt user for amount
@@ -240,7 +243,7 @@ public class RunBank {
 							System.out.println("Enter recipient's last name: ");
 							String recLastNameIn = inp.readLine();
 							Customer rec = logIn(recFirstNameIn, recLastNameIn, custList);
-							BankStatement.printDataHidden(rec);
+							customer.printDataHidden(rec);
 
 							System.out.println("Choose recipient account: ");
 							System.out.println("1. Checking ");
@@ -253,8 +256,8 @@ public class RunBank {
 
 							recipient = acct.paySomeone(acct, acctRec, transferAmount);
 							toCSV(custList);
-							customer.appendTransList(new BankStatement(date.toString(), "pays", curAcct, transferAmount, prevBalance, acct.getAccountBalance()));
-							toLog(option2, acct, recipient, balanceTemp, " TO CHECKING ");
+							customer.printTransaction(new BankStatement(date.toString(), "pays", curAcct, transferAmount, prevBalance, acct.getAccountBalance()));
+							acct.printTransaction(option2, acct, recipient, balanceTemp, " TO CHECKING ");
 							System.out.println("Debug");
 							break;
 						case 6:
@@ -268,7 +271,13 @@ public class RunBank {
 		return;
 		}
 	}
-	
+
+	/**
+	 * This method aid the process of paying another bank user
+	 * @param paysOpt This variable dictates which account is receiving the payment
+	 * @param rec this returns the account that is receiving a payment
+	 * @return
+	 */
 	public static Account paySomeoneHelper(int paysOpt, Customer rec) {
 		Account acctRec = null;
 		switch(paysOpt) {
@@ -297,6 +306,7 @@ public class RunBank {
 		return null;
 	}
 	/**
+	 * Taken from Laurence
 	 * This method is used to modularize UI for transfer
 	 * between accounts
 	 * @param acct - Current account selected from previous menu
@@ -340,14 +350,14 @@ public class RunBank {
 		return null;
 	}
 	/**
-	 * This was taken form Laurence
+	 * This from Laurence
 	 * This method is used to read a CSV and convert to a list
 	 * @param fileName - File name String
 	 * @return List of customers
 	 * @exception IOException throw an exception if file name is incorrect
 	 */
 	public static List<Customer> readCSV(String fileName) throws IOException {
-		FileWriter myWriter = new FileWriter("./PA4/src/bankLog.txt",true);
+		//FileWriter myWriter = new FileWriter("./PA4/src/bankLog.txt",true);
 		List<Customer> custList = new ArrayList<Customer>();
 		try(BufferedReader br = new BufferedReader(new FileReader(fileName))) {
 			String line = "";
@@ -454,7 +464,7 @@ public class RunBank {
 		}
 	
 	}
-	/**
+	/*
 	 * This method is used to write customer list to a CSV
 	 * @param option - option selected by user from UserInt
 	 * @param newAcct - account that is being accessed
@@ -463,44 +473,45 @@ public class RunBank {
 	 * @param logMessage2 - another log message used for logging
 	 * @exception
 	 */
-	public static void toLog(int option, Account newAcct, String logMessage, double amountTemp, String logMessage2) throws IOException {
-		Date date = new Date();
-		try {
-			FileWriter myWriter = new FileWriter("./src/prjBank/bankLog.txt",true);
-			// check if transaction was NOT a transfer AND there was a change in balance
-			if((option <= 3) && (amountTemp != newAcct.getAccountBalance())) {
-				myWriter.write("(" + date.toString() + ") ACCOUNT NUMBER: " + newAcct.getAccountNumber() + " - " + newAcct.getFirstName() + " " 
-						+ newAcct.getLastName() + ":\n" + logMessage + " " + logMessage2 + ", NEW BALANCE: " + newAcct.getAccountBalance() + "\n");
-				myWriter.write("\n");
-				myWriter.close();
-			}
-			if((option == 4) && (amountTemp != newAcct.getAccountBalance())) {
-				myWriter.write("(" + date.toString() + ") ACCOUNT NUMBER: " + newAcct.getAccountNumber() + " - " + newAcct.getFirstName() + " " 
-						+ newAcct.getLastName() + ":\n" + logMessage + " AMOUNT:  " + logMessage2 + ", NEW BALANCE: " + newAcct.getAccountBalance() + "\n");
-				myWriter.write("\n");
-				myWriter.close();
-			}
-			// check if transaction was paySomeone AND there was a change in balance
-			else if((option == 5) && (amountTemp != newAcct.getAccountBalance())) {
-				myWriter.write("(" + date.toString() + ") ACCOUNT NUMBER: " + newAcct.getAccountNumber() + " - " + newAcct.getFirstName() + " " 
-						+ newAcct.getLastName() + ":\n" + logMessage + ", NEW BALANCE: " + newAcct.getAccountBalance() + "\n");
-				myWriter.write("\n");
-				myWriter.close();
-			}
+//	public static void toLog(int option, Account newAcct, String logMessage, double amountTemp, String logMessage2) throws IOException {
+//		Date date = new Date();
+//		try {
+//			FileWriter myWriter = new FileWriter("./src/prjBank/bankLog.txt",true);
+//			// check if transaction was NOT a transfer AND there was a change in balance
+//			if((option <= 3) && (amountTemp != newAcct.getAccountBalance())) {
+//				myWriter.write("(" + date.toString() + ") ACCOUNT NUMBER: " + newAcct.getAccountNumber() + " - " + newAcct.getFirstName() + " "
+//						+ newAcct.getLastName() + ":\n" + logMessage + " " + logMessage2 + ", NEW BALANCE: " + newAcct.getAccountBalance() + "\n");
+//				myWriter.write("\n");
+//				myWriter.close();
+//			}
+//			if((option == 4) && (amountTemp != newAcct.getAccountBalance())) {
+//				myWriter.write("(" + date.toString() + ") ACCOUNT NUMBER: " + newAcct.getAccountNumber() + " - " + newAcct.getFirstName() + " "
+//						+ newAcct.getLastName() + ":\n" + logMessage + " AMOUNT:  " + logMessage2 + ", NEW BALANCE: " + newAcct.getAccountBalance() + "\n");
+//				myWriter.write("\n");
+//				myWriter.close();
+//			}
+//			// check if transaction was paySomeone AND there was a change in balance
+//			else if((option == 5) && (amountTemp != newAcct.getAccountBalance())) {
+//				myWriter.write("(" + date.toString() + ") ACCOUNT NUMBER: " + newAcct.getAccountNumber() + " - " + newAcct.getFirstName() + " "
+//						+ newAcct.getLastName() + ":\n" + logMessage + ", NEW BALANCE: " + newAcct.getAccountBalance() + "\n");
+//				myWriter.write("\n");
+//				myWriter.close();
+//			}
+//
+//			// check if transaction was not successful
+//			else if (amountTemp == newAcct.getAccountBalance()) {
+//				myWriter.write("(" + date.toString() + ") ACCOUNT NUMBER: " + newAcct.getAccountNumber() + " - " + newAcct.getFirstName() + " "
+//						+ newAcct.getLastName() + ":\nTRANSACTION NOT COMPLETE! " + logMessage2 + "\n");
+//				myWriter.write("\n");
+//				myWriter.close();
+//			}
+//
+//		}
+//		catch (IOException e) {
+//		}
+//
+//	}
 
-			// check if transaction was not successful 
-			else if (amountTemp == newAcct.getAccountBalance()) {
-				myWriter.write("(" + date.toString() + ") ACCOUNT NUMBER: " + newAcct.getAccountNumber() + " - " + newAcct.getFirstName() + " " 
-						+ newAcct.getLastName() + ":\nTRANSACTION NOT COMPLETE! " + logMessage2 + "\n");
-				myWriter.write("\n");
-				myWriter.close();
-			}
-				
-		}
-		catch (IOException e) {
-		}
-	
-	}
 	/**
 	 * Taken from Laurence
 	 * Modified by Alfonso
@@ -521,6 +532,7 @@ public class RunBank {
 			System.out.println("5. Main Menu");
 			System.out.println("6. Exit");
 			int option = sc.nextInt();
+			sc.nextLine();
 			switch (option) {
 				case 1:
 					System.out.println("Enter first name of customer: ");
@@ -533,7 +545,7 @@ public class RunBank {
 						System.out.println("Name not found! Going back!");
 						return;
 					}
-					BankStatement.printData(customer);
+					customer.printData(customer);
 
 					break;
 				case 2:
@@ -547,7 +559,7 @@ public class RunBank {
 						case 1:
 							for (Customer acct : custList) {
 								if (acctNum == acct.getChecking().getAccountNumber()) {
-									BankStatement.printData(acct);
+									acct.printData(acct);
 									break;
 								}
 							}
@@ -556,7 +568,7 @@ public class RunBank {
 						case 2:
 							for (Customer acct : custList) {
 								if (acctNum == acct.getSavings().getAccountNumber()) {
-									BankStatement.printData(acct);
+									acct.printData(acct);
 									break;
 								}
 							}
@@ -565,7 +577,7 @@ public class RunBank {
 						case 3:
 							for (Customer acct : custList) {
 								if (acctNum == acct.getCredit().getAccountNumber()) {
-									BankStatement.printData(acct);
+									acct.printData(acct);
 									break;
 								}
 							}
@@ -574,7 +586,7 @@ public class RunBank {
 					}
 				case 3:
 					for (Customer acct : custList) {
-						BankStatement.printData(acct);
+						acct.printData(acct);
 					}
 					break;
 				case 4:
@@ -636,6 +648,7 @@ public class RunBank {
 		return;
 	}
 	/**
+	 * Taken from Laurence
 	 * This method is used to print data of a given account
 	 * @param transList - List of bank statements for a customer
 	 * @return string to be used for writing bank statements
@@ -673,6 +686,8 @@ public class RunBank {
 	}
 	*/
 	/**
+	 * Taken from Laurence
+	 * This way of reading the transaction file matches the transaction reader from alfonso
 	 * This to read a CSV to simulate multiple users accessing
 	 * the bank and their accounts
 	 * @param custList - list of customer objects
@@ -740,9 +755,9 @@ public class RunBank {
 						curBalance = cust.getChecking().getAccountBalance();
 						}
 					System.out.println("\n");
-					cust.appendTransList(new BankStatement(date.toString(), action, fromWhere, actionAmount, prevBalance, curBalance));
+					cust.printTransaction(new BankStatement(date.toString(), action, fromWhere, actionAmount, prevBalance, curBalance));
 					toCSV(custList);
-					toLog(logOpt, logAcct, action, prevBalance, Double.toString(curBalance));
+					logAcct.printTransaction(logOpt, logAcct, action, prevBalance, Double.toString(curBalance));
 				}
 				else if(action.contains("deposits")) {
 					Customer cust = logIn(toFirstName, toLastName, custList);
@@ -769,9 +784,9 @@ public class RunBank {
 						}
 					System.out.println("\n");
 					
-					cust.appendTransList(new BankStatement(date.toString(), action, toWhere, actionAmount, prevBalance, curBalance));
+					cust.printTransaction(new BankStatement(date.toString(), action, toWhere, actionAmount, prevBalance, curBalance));
 					toCSV(custList);
-					toLog(logOpt, logAcct, action, prevBalance, Double.toString(curBalance));
+					logAcct.printTransaction(logOpt, logAcct, action, prevBalance, Double.toString(curBalance));
 				}
 				
 				else if(action.contains("transfers")) {
@@ -794,9 +809,9 @@ public class RunBank {
 					curBalance = acct.getAccountBalance();
 					System.out.println("\n");
 					
-					cust.appendTransList(new BankStatement(date.toString(), action, fromWhere, actionAmount, prevBalance, curBalance));
+					cust.printTransaction(new BankStatement(date.toString(), action, fromWhere, actionAmount, prevBalance, curBalance));
 					toCSV(custList);
-					toLog(logOpt, acct, action + " " + toWhere, prevBalance, "");
+					acct.printTransaction(logOpt, acct, action + " " + toWhere, prevBalance, "");
 				}
 				else if(action.contains("pays")) {
 					Customer cust = logIn(fromFirstName, fromLastName, custList);
@@ -819,9 +834,9 @@ public class RunBank {
 					curBalance = acct.getAccountBalance();
 					System.out.println("\n");
 					
-					cust.appendTransList(new BankStatement(date.toString(), action, fromWhere, actionAmount, prevBalance, curBalance));
+					cust.printTransaction(new BankStatement(date.toString(), action, fromWhere, actionAmount, prevBalance, curBalance));
 					toCSV(custList);
-					toLog(logOpt, acct, recipientMsg, prevBalance, "");
+					acct.printTransaction(logOpt, acct, recipientMsg, prevBalance, "");
 				}
 				//change to where to search by name	
 			}
