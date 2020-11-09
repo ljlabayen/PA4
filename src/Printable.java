@@ -1,8 +1,6 @@
-interface printable {
-    static void printData(Customer acct) {
-
-    }public class Printable {
-
+interface Printable {
+    public static void printData(Customer acct) {
     }
-
+    public static void printDataHidden(Customer acct) {
+    }
 }

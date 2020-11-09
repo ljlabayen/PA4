@@ -1,6 +1,6 @@
 
 
-public class BankStatement implements printable {
+public class BankStatement implements Printable {
 	private String dateTime;
 	private String transType;
 	private String account;
