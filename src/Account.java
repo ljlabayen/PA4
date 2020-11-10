@@ -204,7 +204,7 @@ public abstract class Account implements Printable{
 		+ " - " + acctRec.getAccountNumber();
 	}
 
-	public static void printData(Account acct) {
+	public void printData(Account acct) {
 		System.out.println("Account Number: " + acct.getAccountNumber());
 		System.out.println("Account Balance: " + acct.getAccountBalance());
 	}
