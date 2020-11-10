@@ -1,0 +1,18 @@
+Name: Mickey Mouse
+ Identification #1
+ Date of Birth: "July 21, 1941"
+ Address: "1313 Disneyland Dr, Anaheim, CA 92802"
+ Phone Number: (714) 781-4636
+ Email: MickeyMouse@disney.com
+--------------------------------------------------------------
+
+ Savings Account #2000 Balance: 3990.92
+ Checking Account #1000 Balance: 3234.17
+ Credit Account: #3000 Balance: -1132.03
+TRANSACTION HISTORY: 
+==============================================================
+
+(Mon Nov 09 22:33:25 MST 2020) CHECKING PREVIOUS BALANCE: 2854.17 TYPE: withdraws AMOUNT: 100.0 NEW BALANCE: 2754.17
+(Mon Nov 09 22:33:25 MST 2020) CHECKING PREVIOUS BALANCE: 2754.17 TYPE: deposits AMOUNT: 550.0 NEW BALANCE: 3304.17
+(Mon Nov 09 22:33:25 MST 2020) CHECKING PREVIOUS BALANCE: 3304.17 TYPE: transfers AMOUNT: 50.0 NEW BALANCE: 3254.17
+(Mon Nov 09 22:33:25 MST 2020) CHECKING PREVIOUS BALANCE: 3254.17 TYPE: pays AMOUNT: 20.0 NEW BALANCE: 3234.17

@@ -1,0 +1,16 @@
+Name: Buzz Lightyear
+ Identification #17
+ Date of Birth: "January 25, 1931"
+ Address: "1313 Disneyland Dr, Anaheim, CA 92802"
+ Phone Number: (714) 781-4636
+ Email: BuzzLightyear@disney.com
+--------------------------------------------------------------
+
+ Savings Account #2016 Balance: 3580.2999999999997
+ Checking Account #1016 Balance: 1732.99
+ Credit Account: #3016 Balance: -1205.03
+TRANSACTION HISTORY: 
+==============================================================
+
+(Mon Nov 09 19:13:27 MST 2020) Savings PREVIOUS BALANCE: 1732.99 TYPE: withdraws AMOUNT: 90.0 NEW BALANCE: 1732.99
+(Mon Nov 09 19:13:27 MST 2020) Savings PREVIOUS BALANCE: 3592.66 TYPE: pays AMOUNT: 12.36 NEW BALANCE: 3580.2999999999997
