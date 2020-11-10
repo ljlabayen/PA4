@@ -110,16 +110,18 @@ public class RunBank {
 		System.out.println("Welcome " + firstNameIn + " " + lastNameIn + "\nChecking your credentials...");
 		Customer customer = logIn(firstNameIn, lastNameIn, custList);
 		String curAcct = "";
+
+
+		if(customer == null) {
+			System.out.println("Name not found! Exiting...");
+			return;
+		}
+
 		System.out.println("Enter password: ");
 		String password = sc.nextLine();
 
-
 		if(!(customer.getPassword().equals(password))) {
 			System.out.println("Invalid password! Exiting...");
-			return;
-		}
-		if(customer == null) {
-			System.out.println("Name not found! Exiting...");
 			return;
 		}
 		
@@ -244,6 +246,10 @@ public class RunBank {
 							String recLastNameIn = inp.readLine();
 							Customer rec = logIn(recFirstNameIn, recLastNameIn, custList);
 
+							if (rec == null) {
+								System.out.println("Name not found!");
+								return;
+							}
 
 							System.out.println("Choose recipient account: ");
 							System.out.println("1. Checking ");

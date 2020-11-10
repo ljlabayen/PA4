@@ -48,7 +48,7 @@ public class Savings extends Account implements Printable{
 		System.out.println("Account Number: " + this.getAccountNumber());
 	}
 	/**
-	 * This method is used print account type
+	 * This method is used print the account type
 	 */
 	@Override
 	public void printAccountType() {
