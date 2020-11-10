@@ -16,7 +16,7 @@
 * files were written and produced by me alone.
 */
 
-public class Credit extends Account{
+public class Credit extends Account implements Printable{
 	private double creditMax;
 	/**
 	 * Constructor for Credit Object
@@ -44,5 +44,30 @@ public class Credit extends Account{
 	public void setCreditMax(double creditMax) {
 		this.creditMax = creditMax;
 	}
-	
+	/**
+	 * This method is used print information with
+	 * sensitive information depending on the
+	 * implementation
+	 */
+	@Override
+	public void printData() {
+		System.out.println("Account Number: " + this.getAccountNumber());
+		System.out.println("Account Balance: " + this.getAccountBalance());
+	}
+	/**
+	 * This method is used print information WITHOUT
+	 * sensitive information depending on the
+	 * implementation
+	 */
+	@Override
+	public void printDataHidden() {
+		System.out.println("Account Number: " + this.getAccountNumber());
+	}
+	/**
+	 * This method is used print account type
+	 */
+	@Override
+	public void printAccountType() {
+		System.out.println("Credit");
+	}
 }

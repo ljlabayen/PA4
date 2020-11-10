@@ -20,7 +20,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-public abstract class Account implements Printable{
+public abstract class Account{
 	private String firstName;
 	private String lastName;
 	private int accountNumber;

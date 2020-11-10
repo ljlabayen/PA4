@@ -1,6 +1,6 @@
 import java.sql.SQLOutput;
 
-public class BankStatement implements Printable {
+public class BankStatement {
 	private String dateTime;
 	private String transType;
 	private String account;
@@ -103,6 +103,5 @@ public class BankStatement implements Printable {
 	public void setNewBalance(double newBalance) {
 		this.newBalance = newBalance;
 	}
-
 
 }

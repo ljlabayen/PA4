@@ -135,35 +135,35 @@ public class Customer extends Person implements Printable{
      * From Alfonso
      * Modified by Laurence
      * This method prints out all the user data when it is called
-     * @param acct The account to be printed
      */
-    public void printData(Customer acct){
-        System.out.println("Customer Name: " + acct.getFirstName() + " " + acct.getFirstName());
-        System.out.println("Date of birth: " + acct.getDateOfBirth());
-        System.out.println("Identification Number: " + acct.getIdentNum());
-        System.out.println("Address: " + acct.getAddress());
-        System.out.println("Phone Number: " + acct.getPhoneNum());
-        if(acct.getChecking() != null) { System.out.println("Checking Account #" + acct.getChecking().getAccountNumber() + " - Balance: " + acct.getChecking().getAccountBalance()); }
-        System.out.println("Savings Account #" + acct.getSavings().getAccountNumber() + " - Balance: " + acct.getSavings().getAccountBalance());
-        if(acct.getCredit() != null) { System.out.println("Credit Account #" + acct.getCredit().getAccountNumber() + " - Balance: " + acct.getCredit().getAccountBalance()); }
+    @Override
+    public void printData(){
+        System.out.println("Customer Name: " + this.getFirstName() + " " + this.getLastName());
+        System.out.println("Date of birth: " + this.getDateOfBirth());
+        System.out.println("Identification Number: " + this.getIdentNum());
+        System.out.println("Address: " + this.getAddress());
+        System.out.println("Phone Number: " + this.getPhoneNum());
+        if(this.getChecking() != null) { System.out.println("Checking Account #" + this.getChecking().getAccountNumber() + " - Balance: " + this.getChecking().getAccountBalance()); }
+        System.out.println("Savings Account #" + this.getSavings().getAccountNumber() + " - Balance: " + this.getSavings().getAccountBalance());
+        if(this.getCredit() != null) { System.out.println("Credit Account #" + this.getCredit().getAccountNumber() + " - Balance: " + this.getCredit().getAccountBalance()); }
         System.out.println();
     }
 
     /**
      * From Alfonso
      * Modified by Laurence
-     * This method prints out all the user data without account information when it is called
-     * @param acct The account to be printed
+     * This method prints out all the user data without
+     * sensitive account information when it is called
      */
-    public void printDataHidden(Customer acct){
-        System.out.println("Customer Name: " + acct.getFirstName() + " " + acct.getFirstName());
-        System.out.println("Date of birth: " + acct.getDateOfBirth());
-        System.out.println("Identification Number: " + acct.getIdentNum());
-        System.out.println("Address: " + acct.getAddress());
-        System.out.println("Phone Number: " + acct.getPhoneNum());
-        System.out.println("Email: " + acct.getEmail());
+    @Override
+    public void printDataHidden(){
+        System.out.println("Customer Name: " + this.getFirstName() + " " + this.getLastName());
+        System.out.println("Phone Number: (***) ***" + this.getPhoneNum().substring(9)); //hide some numbers
+        System.out.println("Email: " + this.getEmail());
         System.out.println();
     }
 
-
+    @Override
+    public void printAccountType() {
+    }
 }
