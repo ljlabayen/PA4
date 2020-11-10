@@ -976,3 +976,12 @@ Transfer amount of 11.83 to Sofia Hernandez - 1073, NEW BALANCE: 4558.59
 (Mon Nov 09 16:27:54 MST 2020) ACCOUNT NUMBER: 1027 - Kaa Disney:
 withdraws 1691.69, NEW BALANCE: 1691.69
 
+(Mon Nov 09 18:35:04 MST 2020) ACCOUNT NUMBER: 1103 - Justin Labayen:
+Deposits 10000.0, NEW BALANCE: 10000.0
+
+(Mon Nov 09 18:41:46 MST 2020) ACCOUNT NUMBER: 1064 - Laurence Labayen:
+Transfer amount of 50.0 to Mickey Mouse - 1000, NEW BALANCE: 1479.55
+
+(Mon Nov 09 18:53:03 MST 2020) ACCOUNT NUMBER: 1064 - Laurence Labayen:
+Transfer amount of 50.0 to Mickey Mouse - 1000, NEW BALANCE: 1479.55
+

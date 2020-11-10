@@ -243,7 +243,7 @@ public class RunBank {
 							System.out.println("Enter recipient's last name: ");
 							String recLastNameIn = inp.readLine();
 							Customer rec = logIn(recFirstNameIn, recLastNameIn, custList);
-							customer.printDataHidden(rec);
+
 
 							System.out.println("Choose recipient account: ");
 							System.out.println("1. Checking ");
@@ -251,14 +251,14 @@ public class RunBank {
 							System.out.println("3. Credit ");
 
 							int paysOpt = sc.nextInt();
-
 							Account acctRec = paySomeoneHelper(paysOpt, rec);
-
+							System.out.println("Transferring to: ");
+							rec.printDataHidden(); //PA4 requirement
 							recipient = acct.paySomeone(acct, acctRec, transferAmount);
 							toCSV(custList);
 							customer.printTransaction(new BankStatement(date.toString(), "pays", curAcct, transferAmount, prevBalance, acct.getAccountBalance()));
 							acct.printTransaction(option2, acct, recipient, balanceTemp, " TO CHECKING ");
-							System.out.println("Debug");
+
 							break;
 						case 6:
 							inMenu = false;
@@ -273,7 +273,7 @@ public class RunBank {
 	}
 
 	/**
-	 * This method aid the process of paying another bank user
+	 * This method aids the process of paying another bank user
 	 * @param paysOpt This variable dictates which account is receiving the payment
 	 * @param rec this returns the account that is receiving a payment
 	 * @return
@@ -545,7 +545,7 @@ public class RunBank {
 						System.out.println("Name not found! Going back!");
 						return;
 					}
-					customer.printData(customer);
+					customer.printData();
 
 					break;
 				case 2:
@@ -558,8 +558,9 @@ public class RunBank {
 					switch (option2) {
 						case 1:
 							for (Customer acct : custList) {
-								if (acctNum == acct.getChecking().getAccountNumber()) {
-									acct.printData(acct);
+								if (acct.getChecking().getAccountNumber() == acctNum) {
+									acct.getChecking().printAccountType();
+									acct.getChecking().printData();
 									break;
 								}
 							}
@@ -568,7 +569,8 @@ public class RunBank {
 						case 2:
 							for (Customer acct : custList) {
 								if (acctNum == acct.getSavings().getAccountNumber()) {
-									acct.printData(acct);
+									acct.getSavings().printAccountType();
+									acct.getSavings().printData();
 									break;
 								}
 							}
@@ -577,16 +579,18 @@ public class RunBank {
 						case 3:
 							for (Customer acct : custList) {
 								if (acctNum == acct.getCredit().getAccountNumber()) {
-									acct.printData(acct);
+									acct.getCredit().printAccountType();
+									acct.getCredit().printData();
 									break;
 								}
 							}
 							System.out.println("No match found in credit!");
 							break;
 					}
+					break;
 				case 3:
 					for (Customer acct : custList) {
-						acct.printData(acct);
+						acct.printData();
 					}
 					break;
 				case 4:
@@ -668,7 +672,7 @@ public class RunBank {
 		return print;
 	}
 
-	/**
+	/*
 	 * This method is used to print data of a given account
 	 * @param acct - account used for printing
 
@@ -685,6 +689,7 @@ public class RunBank {
 		System.out.println("\n");
 	}
 	*/
+
 	/**
 	 * Taken from Laurence
 	 * This way of reading the transaction file matches the transaction reader from alfonso
@@ -931,7 +936,8 @@ public class RunBank {
 
 		Customer newCust = new Customer(firstName, lastName, dob, idMax, address, phoneNum, email, password, newCheckingAcct, newSavingsAcct, newCreditAcct);
 		custList.add(newCust);
-		//Account.printData(newCust); FIX
+		System.out.println("Welcome to the Bank of Miners! Here is your information: ");
+		newCust.printData();
 		return custList;
 	}
 	/**
@@ -1112,8 +1118,10 @@ public class RunBank {
 		}
 
 		int customerID = getNextAccountNumber("ID", custList);
-
-		custList.add(new Customer(firstName, lastName, dob, customerID, address, phoneNum, email, password, newCheckingAcct ,newSavingsAcct, newCreditAcct));
+		Customer newCust = new Customer(firstName, lastName, dob, customerID, address, phoneNum, email, password, newCheckingAcct ,newSavingsAcct, newCreditAcct);
+		custList.add(newCust);
+		System.out.println("Welcome to the Bank of Miners! Here is your information:\n ");
+		newCust.printData();
 		return custList;
 	}
 
