@@ -228,7 +228,7 @@ public abstract class Account{
 	public void printTransaction(int option, Account newAcct, String logMessage, double amountTemp, String logMessage2) throws IOException {
 		Date date = new Date();
 		try {
-			FileWriter myWriter = new FileWriter("./PA4/src/prjBank/bankLog.txt",true);
+			FileWriter myWriter = new FileWriter("./PA4/src/bankLog.txt",true);
 			// check if transaction was NOT a transfer AND there was a change in balance
 			if((option <= 3) && (amountTemp != newAcct.getAccountBalance())) {
 				myWriter.write("(" + date.toString() + ") ACCOUNT NUMBER: " + newAcct.getAccountNumber() + " - " + newAcct.getFirstName() + " "

@@ -113,15 +113,15 @@ public class RunBank {
 		System.out.println("Enter password: ");
 		String password = sc.nextLine();
 
-		if(customer == null) {
-			System.out.println("Name not found! Exiting...");
-			return;
-		}
+
 		if(!(customer.getPassword().equals(password))) {
 			System.out.println("Invalid password! Exiting...");
 			return;
 		}
-
+		if(customer == null) {
+			System.out.println("Name not found! Exiting...");
+			return;
+		}
 		
 		while(true) {
 			System.out.println("\nChoose Account: ");

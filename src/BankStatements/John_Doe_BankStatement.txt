@@ -1,0 +1,17 @@
+Name: John Doe
+ Identification #104
+ Date of Birth: 24-DEC-94
+ Address: 987 Main St.
+ Phone Number: (915) 888-8989
+ Email: jdoe123@gmail.com
+--------------------------------------------------------------
+
+ Savings Account #2103 Balance: 1150.0
+ Checking Account #1103 Balance: 6400.0
+TRANSACTION HISTORY: 
+==============================================================
+
+(Mon Nov 09 19:17:42 MST 2020) CHECKING PREVIOUS BALANCE: 0.0 TYPE: deposits AMOUNT: 4000.0 NEW BALANCE: 4000.0
+(Mon Nov 09 19:17:42 MST 2020) CHECKING PREVIOUS BALANCE: 4000.0 TYPE: deposits AMOUNT: 2400.0 NEW BALANCE: 6400.0
+(Mon Nov 09 19:17:42 MST 2020) SAVINGS PREVIOUS BALANCE: 0.0 TYPE: deposits AMOUNT: 1200.0 NEW BALANCE: 1200.0
+(Mon Nov 09 19:17:42 MST 2020) SAVINGS PREVIOUS BALANCE: 1200.0 TYPE: pays AMOUNT: 50.0 NEW BALANCE: 1150.0

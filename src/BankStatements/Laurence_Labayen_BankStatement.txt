@@ -1,0 +1,11 @@
+Name: Laurence Labayen
+ Identification #65
+ Date of Birth: "March 12, 1953"
+ Address: "500 W. University Ave, El Paso, TX 79968"
+ Phone Number: (915) 747-5028
+ Savings Account #2064 Balance: 1732.34
+ Checking Account #1064 Balance: 5563.66
+ Credit Account: #3064 Balance: -1264.46
+TRANSACTION HISTORY: 
+(Tue Nov 03 17:26:28 MST 2020) Checking PREVIOUS BALANCE: 1529.55 TYPE: deposits AMOUNT: 5000.0 NEW BALANCE: 6529.55
+(Tue Nov 03 17:26:28 MST 2020) Checking PREVIOUS BALANCE: 6529.55 TYPE: pays AMOUNT: 1000.0 NEW BALANCE: 5529.55
