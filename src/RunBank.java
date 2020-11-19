@@ -850,14 +850,14 @@ public class RunBank {
 				e.printStackTrace();
 		}
 	}
-	/**
+/*	*//*
 	 * From Laurence
 	 * Modified by Alfonso
 	 * This method is used to create a new customer and add
 	 * to the database
 	 * @param custList - list of customer objects
 	 * @return updated customer list
-	 */
+	 *//*
 	public static List<Customer> newAccount(List<Customer> custList) {
 		Scanner sc = new Scanner(System.in); 
 
@@ -940,13 +940,15 @@ public class RunBank {
 		newCust.printData();
 		return custList;
 	}
-	/**
+	*/
+
+	/*
 	 * This method is used to find the maximum number for each
 	 * account in the list
 	 * @param custList - list of customer objects
 	 * @return array of maximum account values
 	 */
-	public static int[] findMaxNum(List<Customer> custList) {
+	/*public static int[] findMaxNum(List<Customer> custList) {
 		int maxCheck = 0;
 		int maxSavings = 0;
 		int maxCredit = 0;
@@ -972,7 +974,7 @@ public class RunBank {
 		max[3] = maxID;
 		
 		return max;
-	}
+	}*/
 
 	/**
 	 * From Alfonso
@@ -982,7 +984,7 @@ public class RunBank {
 	 * @param customer - list of customer objects
 	 * @return largest number for given account type or ID
 	 */
-	private static int getNextAccountNumber(String account, List<Customer> customer){
+	public static int getNextAccountNumber(String account, List<Customer> customer){
 		int largest = 0;
 		switch (account){
 			case "ID":
@@ -1022,7 +1024,7 @@ public class RunBank {
 	 * @return updated customer list
 	 * @throws IOException If there is no file to read.
 	 */
-	private static List<Customer> createNewUser(List<Customer> custList) throws IOException {
+	public static List<Customer> createNewUser(List<Customer> custList) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		// Getting basic information
