@@ -261,9 +261,11 @@ public class RunBank {
 
 							break;
 						case 6:
+							toCSV(custList);
 							inMenu = false;
 							return;
 						case 7:
+							toCSV(custList);
 							System.exit(0);
 					}
 				}
@@ -1124,6 +1126,7 @@ public class RunBank {
 		custList.add(newCust);
 		System.out.println("Welcome to the Bank of Miners! Here is your information:\n ");
 		newCust.printData();
+		toCSV(custList);
 		return custList;
 	}
 

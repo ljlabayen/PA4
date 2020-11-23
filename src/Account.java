@@ -105,15 +105,17 @@ public abstract class Account{
 	 * @return current balance of account after withdrawal
 	 */
 	public double withdrawal(double amount) {
-		if(amount > getAccountBalance()) {
-			System.out.println("Insufficient funds!");
-		}
-		else if(amount < 0) {
-			System.out.println("Invalid amount!");
-		}
-		else {
-			setAccountBalance(getAccountBalance() - amount);
-			System.out.println("Withdrawal " + amount + " - your new balance is: " + getAccountBalance());
+		try {
+			if (amount > getAccountBalance()) {
+				System.out.println("Insufficient funds!");
+			} else if (amount < 0) {
+				throw new NegativeAmountException(amount);
+			} else {
+				setAccountBalance(getAccountBalance() - amount);
+				System.out.println("Withdrawal " + amount + " - your new balance is: " + getAccountBalance());
+			}
+		}catch(NegativeAmountException e){
+			System.out.println(e.toString());
 		}
 		return getAccountBalance();
 	}
@@ -124,11 +126,15 @@ public abstract class Account{
 	 * @return account balance after deposit
 	 */
 	public double deposit(double amount) {
-		if(amount < 0)
-			System.out.println("Invalid amount!");
-		else {
-			setAccountBalance(getAccountBalance() + amount);
-			System.out.println("Deposit " + amount + " - your new balance is: " + getAccountBalance());
+		try {
+			if (amount < 0)
+				throw new NegativeAmountException(amount);
+			else {
+				setAccountBalance(getAccountBalance() + amount);
+				System.out.println("Deposit " + amount + " - your new balance is: " + getAccountBalance());
+			}
+		}catch(NegativeAmountException e){
+			System.out.println(e.toString());
 		}
 		return getAccountBalance();
 	}
